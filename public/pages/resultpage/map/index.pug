@@ -1,0 +1,452 @@
+//- MAP PAGE
+extends ../layout-resultpages.pug
+block title
+  - var title = "Trang bản đồ";
+  title= title
+block append vendor_styles
+  link(rel="stylesheet",href="../../../vendor/bootstrap-toogle/bootstrap4-toggle.min.css")
+  link(rel="stylesheet",href="../../../assets/stylesheets/partials/map/bootstrap-tagsinput.css")
+block append styles
+  link(rel="stylesheet",href="../../../assets/stylesheets/pages/_map.css")
+block append scripts
+  script(src='../../../vendor/bootstrap-toogle/bootstrap4-toggle.min.js')
+
+block content
+  //- DESKTOP DISPLAY
+  .container-fluid.d-none.d-xl-block
+    .row.flex-xl-nowrap
+      .col-4.bd-sidebar.section-map__result
+        .map-result-container
+          #autoComplete__content.w-100.input-search__content.collapsed
+            .search-input-container.d-flex.align-items-center
+              .search-menu
+                button.drawer-toggler(data-toggle='modal', data-target='#drawerToggleExternalContent', aria-controls='drawerToggleExternalContent', aria-expanded='false', aria-label='Toggle navigation')
+                  img(src='../../../assets/img/SVG/menu.svg', alt='')
+              .search-input
+                div
+                  input#autoComplete.form-control(type='text', placeholder='Search ...', tabindex='1')
+              .search-icon
+                img(src='../../../assets/img/SVG/search.svg', alt='')
+          .seperate.border-bottom.mt-4.mb-2
+          .search-filter-container.ml-2
+            .dropdown
+              button#dropdownMenuButton.btn.dropdown-toggle.search-filter--btn(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                | S&#x1EAF;p x&#x1EBF;p theo
+              .dropdown-menu.py-2(aria-labelledby='dropdownMenuButton')
+                div.dropdown-item.px-2.py-2 Action
+                div.dropdown-item.px-2.py-2 Another action
+                div.dropdown-item.px-2.py-2 Something else here
+          .search-result-container
+            // Search result item
+            .search-result__item.active
+              .row.item-container
+                .col-4.item-image(style="background-image: url('../../../assets/img/house-thumb.jpg')")
+                  .sr-item__favorite
+                    img(src='../../../assets/img/icon-favorite.png', alt='')
+                  .sr-item__non-favorite
+                    img(src='../../../assets/img/icon-non-favorite.png', alt='')
+                .col-8.item-details
+                  .row.item-price
+                    p.border-right.price 7,5 tri&#x1EC7;u
+                    p.border-right.acreage 60,78m2
+                    p.ratio 10 x 6,8m
+                  .item-type
+                    p C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;
+                  .row.item-info
+                    p.border-right Thu&ecirc;
+                    p.border-right S&#x1ED1; t&#x1EDD; 30
+                    p S&#x1ED1; th&#x1EED;a - -
+                  .row.item-detail
+                    p
+                      img(src='../../../assets/img/SVG/bed.svg', alt='')
+                      |  10
+                    p
+                      img(src='../../../assets/img/SVG/shower.svg', alt='')
+                      |  20
+                    p
+                      img(src='../../../assets/img/SVG/direction.svg', alt='')
+                      |  &Dstrok;&ocirc;ng Nam
+            // Search result item
+            .search-result__item
+              .row.item-container
+                .col-4.item-image(style="background-image: url('../../../assets/img/house-thumb.jpg')")
+                  .sr-item__favorite
+                    img(src='../../../assets/img/icon-favorite.png', alt='')
+                  .sr-item__non-favorite
+                    img(src='../../../assets/img/icon-non-favorite.png', alt='')
+                .col-8.item-details
+                  .row.item-price
+                    p.border-right.price 7,5 tri&#x1EC7;u
+                    p.border-right.acreage 60,78m2
+                    p.ratio 10 x 6,8m
+                  .item-type
+                    p C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;
+                  .row.item-info
+                    p.border-right Thu&ecirc;
+                    p.border-right S&#x1ED1; t&#x1EDD; 30
+                    p S&#x1ED1; th&#x1EED;a - -
+                  .row.item-detail
+                    p
+                      img(src='../../../assets/img/SVG/bed.svg', alt='')
+                      |  10
+                    p
+                      img(src='../../../assets/img/SVG/shower.svg', alt='')
+                      |  20
+                    p
+                      img(src='../../../assets/img/SVG/direction.svg', alt='')
+                      |  &Dstrok;&ocirc;ng Nam
+            // Search result item
+            .search-result__item
+              .row.item-container
+                .col-4.item-image(style="background-image: url('../../../assets/img/house-thumb.jpg')")
+                  .sr-item__favorite
+                    img(src='../../../assets/img/icon-favorite.png', alt='')
+                  .sr-item__non-favorite
+                    img(src='../../../assets/img/icon-non-favorite.png', alt='')
+                .col-8.item-details
+                  .row.item-price
+                    p.border-right.price 7,5 tri&#x1EC7;u
+                    p.border-right.acreage 60,78m2
+                    p.ratio 10 x 6,8m
+                  .item-type
+                    p C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;
+                  .row.item-info
+                    p.border-right Thu&ecirc;
+                    p.border-right S&#x1ED1; t&#x1EDD; 30
+                    p S&#x1ED1; th&#x1EED;a - -
+                  .row.item-detail
+                    p
+                      img(src='../../../assets/img/SVG/bed.svg', alt='')
+                      |  10
+                    p
+                      img(src='../../../assets/img/SVG/shower.svg', alt='')
+                      |  20
+                    p
+                      img(src='../../../assets/img/SVG/direction.svg', alt='')
+                      |  &Dstrok;&ocirc;ng Nam
+            // Search result item
+            .search-result__item
+              .row.item-container
+                .col-4.item-image(style="background-image: url('../../../assets/img/house-thumb.jpg')")
+                  .sr-item__favorite
+                    img(src='../../../assets/img/icon-favorite.png', alt='')
+                  .sr-item__non-favorite
+                    img(src='../../../assets/img/icon-non-favorite.png', alt='')
+                .col-8.item-details
+                  .row.item-price
+                    p.border-right.price 7,5 tri&#x1EC7;u
+                    p.border-right.acreage 60,78m2
+                    p.ratio 10 x 6,8m
+                  .item-type
+                    p C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;
+                  .row.item-info
+                    p.border-right Thu&ecirc;
+                    p.border-right S&#x1ED1; t&#x1EDD; 30
+                    p S&#x1ED1; th&#x1EED;a - -
+                  .row.item-detail
+                    p
+                      img(src='../../../assets/img/SVG/bed.svg', alt='')
+                      |  10
+                    p
+                      img(src='../../../assets/img/SVG/shower.svg', alt='')
+                      |  20
+                    p
+                      img(src='../../../assets/img/SVG/direction.svg', alt='')
+                      |  &Dstrok;&ocirc;ng Nam
+            // Search result item
+            .search-result__item
+              .row.item-container
+                .col-4.item-image(style="background-image: url('../../../assets/img/house-thumb.jpg')")
+                  .sr-item__favorite
+                    img(src='../../../assets/img/icon-favorite.png', alt='')
+                  .sr-item__non-favorite
+                    img(src='../../../assets/img/icon-non-favorite.png', alt='')
+                .col-8.item-details
+                  .row.item-price
+                    p.border-right.price 7,5 tri&#x1EC7;u
+                    p.border-right.acreage 60,78m2
+                    p.ratio 10 x 6,8m
+                  .item-type
+                    p C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;
+                  .row.item-info
+                    p.border-right Thu&ecirc;
+                    p.border-right S&#x1ED1; t&#x1EDD; 30
+                    p S&#x1ED1; th&#x1EED;a - -
+                  .row.item-detail
+                    p
+                      img(src='../../../assets/img/SVG/bed.svg', alt='')
+                      |  10
+                    p
+                      img(src='../../../assets/img/SVG/shower.svg', alt='')
+                      |  20
+                    p
+                      img(src='../../../assets/img/SVG/direction.svg', alt='')
+                      |  &Dstrok;&ocirc;ng Nam
+      // MAP MAINT CONTENT
+      main.col-8.bd-content.section-map__content(style="background-image: url('../../../assets/img/map.png')")
+        .map__content.h-100
+          #map_canvas(style='width: 100%; height: 768px; padding-bottom: 10px; position: relative;')
+          // FILTER BAR FOR MAP
+          include ./filter-map.pug
+        // Map notification
+        #map-notification.map-notification
+          .map-notification__container
+            .d-flex.map-notification__content.justify-content-center
+              .notification--text
+                | C&oacute; qu&aacute; nhi&#x1EC1;u B&Dstrok;S / D&#x1EF1; &aacute;n &dstrok;&#x1B0;&#x1EE3;c t&igrave;m th&#x1EA5;y nh&#x1B0;ng ch&#x1EC9; hi&#x1EC3;n th&#x1ECB; t&#x1ED1;i &dstrok;a 500 &dstrok;&#x1ED1;i t&#x1B0;&#x1EE3;ng, zoom in b&#x1EA3;n &dstrok;&#x1ED3; &dstrok;&#x1EC3; xem
+                | th&ecirc;m
+              .ml-2.notification--link &Dstrok;&atilde; hi&#x1EC3;u
+              .notification--background
+        // Map Zoom
+        #map-zoom.map-zoom
+          .map-zoom
+            .d-flex.flex-column.map-zoom
+              .map-zoom--item.map-zoom--in
+                .map-zoom--btn.zoom-in__content
+                  img(src='../../../assets/img/baseline-in.png', alt='')
+              .map-zoom--item.map-zoom--out
+                .map-zoom--btn.zoom-out__content
+                  img(src='../../../assets/img/baseline-out.png', alt='')
+  //- MOBILE DISPLAY
+  .map-mobile.row.flex-xl-nowrap.d-xl-none
+    .container
+      #m1-header_mobile.homepage-header_mobile.d-xl-none
+        .m1-header_mobile__container
+          .m1-header_mobile__content.d-flex.justify-content-between
+            .m1-menu_mobile__drawer.d-flex.align-items-center
+              .mobile-drawer__content
+                .drawer-toggler(data-toggle='modal', data-target='#drawerToggleExternalContentMobile', aria-controls='drawerToggleExternalContentMobile', aria-expanded='false', aria-label='Toggle navigation')
+                  img(src='../../assets/img/icon-drawer.png', alt='')
+                #drawerToggleExternalContentMobile.modal.fadeInRight(tabindex='-1', role='dialog', aria-labelledby='drawerToggleExternalContentMobile', aria-hidden='true')
+                  .modal-content
+                    nav.mobile-navbar
+                      .mobile-navbar__content
+                        a.navbar-brand(href='/')
+                          img(src='../../assets/img/asset-logo.png', alt='')
+                        .navbar__items
+                          .navbar--item
+                            a(href='/ket-qua/thong-tin') Th&ocirc;ng tin
+                          .navbar--item
+                            a(href='/ban-do') B&#x1EA3;n &dstrok;&#x1ED3;
+                          .navbar--item
+                            a(href='/ket-qua/bang-gia') B&#x1EA3;ng gi&aacute;
+                          .navbar--item
+                            a(href='#') Danh b&#x1EA1;
+                          .navbar--item
+                            a(href='#') T&agrave;i nguy&ecirc;n
+                          .navbar--item
+                            a(href='#') H&#x1ECF;i &dstrok;&aacute;p
+            .m1-menu_mobile__items.d-flex.align-items-center
+              .m1-menu--item.dropdown.dropdown__menu-tool
+                .dropdown-toggle(data-toggle='dropdown')
+                  img.img_menu(src='../../assets/img/Group 1.png', alt='')
+                .dropdown-menu.menu-tool
+                  .dropdown-item
+                    a(href='#')
+                      img(src='../../assets/img/Group 1569.png', alt='')
+                      span.menu-tool--text
+                        | T&iacute;nh to&aacute;n kho&#x1EA3;n
+                        | vay
+                  .dropdown-item
+                    a(href='#')
+                      img(src='../../assets/img/baseline-insert_chart-24px.png', alt='')
+                      span.menu-tool--text T&iacute;nh to&aacute;n hi&#x1EC7;u qu&#x1EA3; d&#x1EF1; &aacute;n
+                  .dropdown-item
+                    a(href='#')
+                      img(src='../../assets/img/baseline-monetization_on-24px.png', alt='')
+                      span.menu-tool--text T&agrave;i ch&iacute;nh c&aacute; nh&acirc;n
+              .m1-menu--item
+                .menu-notify
+                  a(href='#')
+                    img(src='../../assets/img/Group 22.png', alt='')
+              .m1-menu--item
+                a.btn-login(href='/dang-nhap')
+                  img(src='../../assets/img/icon-avatar.png', alt='')
+      #m1-body.homepage-body
+        .m1-body__container.h-100
+          .m1-body__content.h-100.d-flex.flex-column.justify-content-center
+            .map-mobile.d-flex.flex-column.align-items-center
+              img(src='../../../assets/img/baseline-mobile.png', alt='')
+              span.map-mobile-off Mobile off
+              span.map-mobile--notify H&atilde;y tr&#x1EA3;i nghi&#x1EC7;m ch&#x1EE9;c n&abreve;ng n&agrave;y tr&ecirc;n desktop
+  // CHAT SIDEBAR
+  #chat-sidebar.chat-sidebar.collapsed.d-none.d-xl-block
+    .chat-sidebar__container
+      .chat-sidebar__content.d-flex.flex-column.justify-content-between
+        // Chat Sidebar Top
+        .chat-sidebar__top
+          .chat-sidebar--btn-collapse
+            .btn-expand__content
+              button#btn-chat--expand.btn.btn-chat--expand
+                img(src='../../../assets/img/Path 115.png', alt='')
+        // Chat Sidebar Bottom
+        .chat-sidebar__bottom
+          // Chat list
+          .chat-sidebar__list.chat-list
+            .chat-list__container
+              .chat-list__content
+                .chat-list__contact
+                  .chat-list--contact-items
+                    // Contact items
+                    .contact-items.contact-items__active
+                      // Contact item
+                      .contact-item.d-flex.justify-content-center
+                        .contact-item--avatar
+                          img(src='../../../assets/img/chat-avt-1.png', alt='')
+                        .contact-item--name L&ecirc; &Aacute;nh H&#x1ED3;ng Nga
+                        .contact-item--status
+                          img(src='../../../assets/img/icon-chat-active.png', alt='')
+                      // Contact item
+                      .contact-item.d-flex.justify-content-center
+                        .contact-item--avatar
+                          img(src='../../../assets/img/chat-avt-2.png', alt='')
+                        .contact-item--name Peter Parker
+                        .contact-item--status
+                          img(src='../../../assets/img/icon-chat-active.png', alt='')
+                      // Contact item
+                      .contact-item.d-flex.justify-content-center
+                        .contact-item--avatar
+                          img(src='../../../assets/img/chat-avt-3.png', alt='')
+                        .contact-item--name Tom Hank
+                        .contact-item--status
+                          img(src='../../../assets/img/icon-chat-active.png', alt='')
+                      // Contact item
+                      .contact-item.d-flex.justify-content-center
+                        .contact-item--avatar
+                          img(src='../../../assets/img/chat-avt-4.png', alt='')
+                        .contact-item--name Amy Lee Johnson
+                        .contact-item--status
+                          img(src='../../../assets/img/icon-chat-active.png', alt='')
+                      // Contact item
+                      .contact-item.d-flex.justify-content-center
+                        .contact-item--avatar
+                          img(src='../../../assets/img/chat-avt-5.png', alt='')
+                        .contact-item--name Picasa Poo
+                        .contact-item--status
+                          img(src='../../../assets/img/icon-chat-active.png', alt='')
+                    // Contact items
+                    .contact-items.contact-items__inactive
+                      // Contact item
+                      .contact-item.d-flex.justify-content-center
+                        .contact-item--avatar
+                          img(src='../../../assets/img/chat-avt-6.png', alt='')
+                        .contact-item--name Jessica Snow
+                        .contact-item--status
+                          img(src='../../../assets/img/icon-chat-active.png', alt='')
+          // Chat message
+          .chat-sidebar__chat-message
+            .chat-message__container
+              .chat-message__content
+                .chat-message.d-flex.justify-content-center.align-items-center
+                  .chat-message--icon
+                    img(src='../../../assets/img/chat-message.png', alt='')
+          // Chat Search
+          .chat-sidebar__search-input
+            .search-input
+              .search-input__container
+                .search-input__content
+                  .input-group
+                    .input-group-prepend
+                      .search-icon
+                        img(src='../../../assets/img/SVG/search.svg', alt='')
+                    input.form-control(type='text', placeholder='Tìm kiếm bạn bè', aria-label='Username', aria-describedby='basic-addon1')
+          // Chat pop-up
+          #chat-sidebar__pop-up
+            .chat-popup
+              .chat-popup__container
+                .chat-popup__content
+                  #chat-popup__items.chat-popup__items
+                    .chat-popup--item
+                      .chat-popup--header.d-flex
+                        .chat-popup--status
+                          img(src='../../../assets/img/icon-chat-active.png', alt='')
+                        span.ml-2.header--text Test
+                        .chat-popup--close &times;
+                      .chat-popup--body
+                        .message-received
+                          .message-received__content.row
+                            .col-2.px-0.received__content--icon
+                              img(src='../../../assets/img/chat-avt-1.png', alt='')
+                            .col-10.received__content--text
+                              span
+                                | KHLCNT c&#x1EE7;a Ban Qu&#x1EA3;n l&yacute; d&#x1EF1; &aacute;n &dstrok;&#x1EA7;u t&#x1B0; x&acirc;y .... KHLCNT c&#x1EE7;a S&#x1EDF; T&agrave;i ch&iacute;nh t&#x1EC9;nh H&#x1B0;ng Y&ecirc;n
+                                | cho d&#x1EF1;
+                                | &aacute;n &ldquo;Mua s&#x1EAF;m thi&#x1EBF;t b&#x1ECB; &dstrok;&#x1ECB;nh .... H&#x1EA1;ng m&#x1EE5;c: X&oacute;m Ao V&agrave;ng, C&#x1ED5; R&ugrave;a, G&ograve; Ch&egrave;, Ph&uacute;c L&#x1ED9;c, Quy&#x1EBF;t
+                                | Th&#x1EAF;ng, T&acirc;n ...
+                            .col-12.received__content--time.text-right
+                              span 12:09 - 18/10/2019
+                        .message-send
+                          .message-send__content.row.align-items-end.flex-column
+                            .message-send--text
+                              span OK
+                            .message-send--time.text-right
+                              span 1 min
+                      .chat-popup--input
+                        .input-group
+                          input.form-control(type='text', placeholder='Nhập tin nhắn', aria-label='Username', aria-describedby='basic-addon1')
+                          .input-group-append
+                            .send-icon
+                              img(src='../../../assets/img/icon-send.png', alt='')
+  // DRAWER BAR
+  .dt-menu__drawer.d-flex.align-items-center
+    .menu-drawer__content
+      #drawerToggleExternalContent.modal.fadeInRight(tabindex='-1', role='dialog', data-backdrop='static', aria-labelledby='drawerToggleExternalContent', aria-hidden='true')
+        .modal-content
+          nav.dt-navbar
+            .dt-navbar__content
+              .btn-drawer__toggle(data-dismiss='modal')
+                img(src='../../assets/img/icon-chevron-right.png')
+              a.dt-navbar--brand(href='/')
+                img(src='../../assets/img/asset-logo.png', alt='')
+              .dt-navbar__user
+                .navbar-user__content.d-flex.align-items-center
+                  .user--avatar
+                    img(src='../../assets/img/icon-avatar.png', alt='')
+                  .user--infor
+                    .user-infor__content
+                      .user--name Hu&#x1EF3;nh Th&#x1ECB; Di&#x1EC7;u Th&#x1B0;&#x1A1;ng
+                      .user--rate
+                        .user-rate__content.d-flex.align-items-center
+                          span.user-rate__name
+                            | [Chuy&ecirc;n gia 
+                            span.user-rate__level 4.5+
+                          img.user-rate__icon(src=' ../../../assets/img/SVG/star.svg', alt='')
+                          | ]
+                  .user--menu
+                    .user-menu__content.d-flex.align-items-center
+                      .menu--item.dropdown.dropdown-right.dropdown__menu-tool
+                        .dropdown-toggle(data-toggle='dropdown')
+                          img.img_menu(src='../../assets/img/Group 1.png', alt='')
+                        .dropdown-menu.dropdown-menu-right.menu-tool
+                          .dropdown-item
+                            a(href='#')
+                              img(src='../../assets/img/Group 1569.png', alt='')
+                              span.menu-tool--text
+                                | T&iacute;nh to&aacute;n
+                                | kho&#x1EA3;n
+                                | vay
+                          .dropdown-item
+                            a(href='#')
+                              img(src='../../assets/img/baseline-insert_chart-24px.png', alt='')
+                              span.menu-tool--text T&iacute;nh to&aacute;n hi&#x1EC7;u qu&#x1EA3; d&#x1EF1; &aacute;n
+                          .dropdown-item
+                            a(href='#')
+                              img(src='../../assets/img/baseline-monetization_on-24px.png', alt='')
+                              span.menu-tool--text T&agrave;i ch&iacute;nh c&aacute; nh&acirc;n
+                      .menu--item
+                        .menu-notify
+                          a(href='#')
+                            img(src='../../assets/img/Group 22.png', alt='')
+              .dt-navbar__items
+                a.dt-navbar--item(href='/ket-qua/thong-tin') Th&ocirc;ng tin
+                a.dt-navbar--item(href='/ket-qua/bang-gia') B&#x1EA3;ng gi&aacute;
+                a.dt-navbar--item(href='#') Th&ecirc;m
+
+block append body_scripts
+  script(src='../../../assets/scripts/bootstrap-tagsinput.min.js')
+  script(src='../../assets/scripts/chat/index.js')
+  //- script(src='../../../assets/scripts/resultpage/map/filter-bar.js')
+  script(src='../../../assets/scripts/resultpage/map/filter-bar-dist.js')
+  script(src='../../vendor/auto-complete/autocomplete.js')
+  script(src='../../assets/scripts/resultpage/generic.js')
+  script(src='./../assets/scripts/resultpage/resultpage-autocomplete.js')

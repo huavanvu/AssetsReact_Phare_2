@@ -1,0 +1,506 @@
+//- FILTER MAP
+#filterBar.h-100
+  .filterBar__container
+    .filterbar__content
+      .w-100.filterBar__top.d-flex.justify-content-between
+        .filterBar__top--additional
+          .top-additional
+            .top-additional__container
+              .top-additional__content
+                .row
+                  // Filter Type
+                  #filterType.top-additional--filter.filter-type
+                    .filter__content.d-flex.align-items-center
+                      #filter-type.filter--text.filter-type--text D&#x1EF1; &aacute;n
+                      .filter-type--switch.d-flex.align-items-center
+                        .btn-switch
+                          .btn-switch__container
+                            .btn-switch__content.d-flex.align-items-center
+                              input#filter__switch-type(type='checkbox', checked='', data-toggle='toggle', data-on='Dự án', data-off='BĐS', data-style='btn-switch__input', data-width='49', data-height='18')
+                  // FILTERS FOR PROJECT
+                  #filters-project.d-flex.filters-project.show
+                    // Filter Category
+                    #filterCategory.top-additional--filter.filter-category.filter-options-total(data-title='Loại dự án')
+                      .d-flex.align-items-center.filter__content
+                        .dropdown-toggle.d-flex.text-center(data-toggle='dropdown')
+                          span(style='max-width: 125px;').filter--text.filter-category--text Lo&#x1EA1;i d&#x1EF1; &aacute;n
+                        .dropdown-menu
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-apartment.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-apartment')
+                                  | Chung C&#x1B0;
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-city.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-city')
+                                  | &Dstrok;&ocirc; th&#x1ECB;
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-resort.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-resort')
+                                  | Ngh&#x1EC9; d&#x1B0;&#x1EE1;ng
+                    // Filter Price
+                    #filterPrice.top-additional--filter.filter-price
+                      .d-flex.align-items-center.filter__content
+                        .dropdown-toggle.d-flex(data-toggle='dropdown') 
+                          span(style='max-width: 110px;').filter--text.filter-category--text.text-center M&#x1EE9;c gi&aacute;
+                        .dropdown-menu
+                          .row.pricelist-range__container
+                            .col-6.pricelist-range
+                              input.form-control.input-price-min(type='text', placeholder='Min')
+                              div.menu-price__min.min-options
+                                - var indexPrice = 0;
+                                    // Dropdown item
+                                    .dropdown-item(tabindex='0')
+                                      .dropdown-item__content
+                                        span 0
+                                    while indexPrice < 60
+                                      - indexPrice += 5
+                                      // Dropdown item
+                                      .dropdown-item(tabindex=`${indexPrice}`)
+                                        .dropdown-item__content
+                                          span #{indexPrice} tri&#x1EC7;u
+                            .col-6.pricelist-range
+                              input.form-control.input-price-max(type='text', placeholder='Max')
+                              div.menu-price__max.max-options
+                                - var indexPrice = 0;
+                                    while indexPrice < 60
+                                      - indexPrice += 5
+                                      // Dropdown item
+                                      .dropdown-item(tabindex=`${indexPrice}`)
+                                        .dropdown-item__content
+                                          span #{indexPrice} tri&#x1EC7;u
+                                .dropdown-item(tabindex=`-1`)
+                                  .dropdown-item__content
+                                    span Bất kỳ
+                    // Filter Status
+                    #filterStatus.top-additional--filter.filter-status.filter-options-radio(data-title='Tình trạng')
+                      .d-flex.align-items-center.filter__content
+                        .dropdown-toggle.filter--text.filter-status--text.text--center(data-toggle='dropdown', style='max-width: 120px;') T&igrave;nh tr&#x1EA1;ng
+                        .dropdown-menu
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-inprogress.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-inprogress')
+                                  | &Dstrok;ang l&agrave;m
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-done.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-done')
+                                  | &Dstrok;&atilde; b&agrave;n giao
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-waiting.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-waiting')
+                                  | Ch&#x1B0;a l&agrave;m
+                    // Filter Invesment
+                    #filterInvesment.top-additional--filter.filter-invesment(data-title='Chủ đầu tư')
+                      .d-flex.align-items-center.filter__content
+                        .dropdown-toggle.d-flex.text--center(data-toggle='dropdown')
+                          span(style='max-width: 125px;').filter--text.filter-category--text Ch&#x1EE7; &dstrok;&#x1EA7;u t&#x1B0;
+                        .dropdown-menu
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content
+                              input(type='text', placeholder='Ex: Thắng lợi group')
+                    // Filter More
+                    #filterMore.top-additional--filter.filter-more.filter-options-count(data-title='Thêm', data-option-count=0)
+                      .d-flex.align-items-center.filter__content
+                        .dropdown-toggle.filter--text.filter-more--text.text--center(data-toggle='dropdown') Th&ecirc;m
+                        .dropdown-menu.dropdown-menu-right
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content
+                              .handover-time
+                                .dropdown-item--title.handover-time--title
+                                  | Th&#x1EDD;i gian b&agrave;n giao
+                                .d-flex.checkbox-radio-area
+                                  .handover-time--input-date
+                                    input.filter-input-count.w-100(type='text', placeholder='dd/mm/yyyy')
+                                  .form-check.handover-time--checkbox-before
+                                    input#dropdownCheck-before.form-check-input(type='checkbox')
+                                    label.form-check-label(for='dropdownCheck-before')
+                                      | Tr&#x1B0;&#x1EDB;c
+                                  .form-check.handover-time--checkbox-after
+                                    input#dropdownCheck-after.form-check-input(type='checkbox')
+                                    label.form-check-label(for='dropdownCheck-after')
+                                      | Sau
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content
+                              .category-info
+                                .dropdown-item--title.category-info--title Lo&#x1EA1;i chi ti&#x1EBF;t
+                                .d-flex(role='menu')
+                                  select#selectCategoryInfo.filter-input-count.category-info__select.custom-select
+                                    option(value='', selected) Vui l&ograve;ng ch&#x1ECD;n
+                                    option(value='1') Kh&ocirc;ng c&oacute; kh&#x1ED1;i &dstrok;&#x1EBF;
+                                    option(value='2') H&#x1B0;&#x1EDB;ng ngo&#x1EA1;i
+                                    option(value='3') Kh&ocirc;ng ph&acirc;n lo&#x1EA1;i
+                                    option(value='4') C&oacute; kh&#x1ED1;i &dstrok;&#x1EBF;
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content
+                              .filter-more__tags
+                                .dropdown-item--title.category-info--title T&#x1EEB; kho&aacute;
+                                .d-flex
+                                  input.filter-input-count(type='text', data-role='tagsinput')
+                  // END FILTERS FOR PROPERTIES
+                  // FILTER FOR PROPERTIES
+                  #filters-properties.d-flex.filters-properties
+                    // Filter Trading
+                    #filterTrading.top-additional--filter.filter-trading.filter-options-total(data-title='Loại giao dịch')
+                      .filter__content.d-flex.align-items-center
+                        .filter-add-icon#filterTradingList.dropdown-toggle.d-flex.align-items-center(data-toggle='dropdown', style='max-width: 108.7px;')
+                          span.trading-icon.icon-for-sale
+                          span.trading-icon.icon-for-rent
+                          span.trading-icon.icon-for-sold
+                          span.filter--text.filter-trading--text(style='max-width: 108.7px;') Lo&#x1EA1;i giao d&#x1ECB;ch
+                        .dropdown-menu
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-sale.form-check-input(type='checkbox', data-trading='sale')
+                                .form-check-icon
+                                label.form-check-label(for='dropdownCheck-sale')
+                                  | B&Dstrok;S B&aacute;n
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-rent.form-check-input(type='checkbox', data-trading='rent')
+                                .form-check-icon.form-check-rent
+                                label.form-check-label(for='dropdownCheck-rent')
+                                  | B&Dstrok;S Thu&ecirc;
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-sold.form-check-input(type='checkbox', data-trading='sold')
+                                .form-check-icon.form-check-sold
+                                label.form-check-label(for='dropdownCheck-sold')
+                                  | &Dstrok;&atilde; b&aacute;n
+                    // Filter Price
+                    #filterPrice.top-additional--filter.filter-price
+                      .d-flex.align-items-center.filter__content
+                        .dropdown-toggle.d-flex(data-toggle='dropdown') 
+                          span(style='max-width: 109px;').filter--text.filter-category--text.text-center M&#x1EE9;c gi&aacute;
+                        .dropdown-menu
+                          .row.pricelist-range__container
+                            .col-6.pricelist-range
+                              input.form-control.input-price-min(type='text', placeholder='Min')
+                              div.menu-price__min.min-options
+                                - var indexPrice = 0;
+                                    while indexPrice < 60
+                                      - indexPrice += 5
+                                      // Dropdown item
+                                      .dropdown-item(tabindex=`${indexPrice}`)
+                                        .dropdown-item__content
+                                          span #{indexPrice} tri&#x1EC7;u
+                            .col-6.pricelist-range
+                              input.form-control.input-price-max(type='text', placeholder='Max')
+                              div.menu-price__max.max-options
+                                - var indexPrice = 0;
+                                    while indexPrice < 60
+                                      - indexPrice += 5
+                                      // Dropdown item
+                                      .dropdown-item(tabindex=`${indexPrice}`)
+                                        .dropdown-item__content
+                                          span #{indexPrice} tri&#x1EC7;u
+                                .dropdown-item(tabindex=`-1`)
+                                  .dropdown-item__content
+                                    span Bất kỳ
+                    // Filter Rooms
+                    #filterRoom.top-additional--filter.filter-room.filter-options-radio(data-title='Tình trạng')
+                      .d-flex.align-items-center.filter__content
+                        .dropdown-toggle.d-flex.text-center(data-toggle='dropdown')
+                          span(style='max-width: 120px;').filter--text.filter-room--text T&igrave;nh tr&#x1EA1;ng
+                        .dropdown-menu
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-room-0.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-room-0')
+                                  | 0 +
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-room-1.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-room-1')
+                                  | 1 +
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-room-2.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-room-2')
+                                  | 2 +
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-room-3.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-room-3')
+                                  | 3 +
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-room-4.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-room-4')
+                                  | 4 +
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-room-5.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-room-5')
+                                  | 5 +
+                    // Filter Properties type
+                    #filterProtype.top-additional--filter.filter-protype.filter-options-total(data-title='Loại bất động sản')
+                      .d-flex.align-items-center.filter__content
+                        .dropdown-toggle.d-flex(data-toggle='dropdown')
+                          span.filter--text.filter-protype--text.text-center(style='max-width: 170px') Lo&#x1EA1;i b&#x1EA5;t &dstrok;&#x1ED9;ng s&#x1EA3;n
+                        .dropdown-menu
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-pro-apartment.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-pro-apartment')
+                                  | C&abreve;n h&#x1ED9; chung c&#x1B0;
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-officetel.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-officetel')
+                                  | Officetel
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-shophouse.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-shophouse')
+                                  | Shop house
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-house.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-house')
+                                  | Nh&agrave; ri&ecirc;ng
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-cityhouse.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-cityhouse')
+                                  | Nh&agrave; ph&#x1ED1; li&#x1EC1;n k&#x1EC1;
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-villa.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-villa')
+                                  | Bi&#x1EC7;t th&#x1EF1;
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-condotel.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-condotel')
+                                  | Condotel
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-resort.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-resort')
+                                  | Bi&#x1EC7;t th&#x1EF1; ngh&#x1EC9; d&#x1B0;&#x1EE1;ng
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-bungalow.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-bungalow')
+                                  | Bungalow
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-land.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-land')
+                                  | &Dstrok;&#x1EA5;t n&#x1EC1;n/ &Dstrok;&#x1EA5;t d&#x1EF1; &aacute;n
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-official.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-official')
+                                  | To&agrave; nh&agrave; v&abreve;n ph&ograve;ng
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-hotel.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-hotel')
+                                  | Kh&aacute;ch s&#x1EA1;n
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content.input-group
+                              .form-check.dropdown-item--checkbox
+                                input#dropdownCheck-mall.form-check-input(type='checkbox')
+                                label.form-check-label(for='dropdownCheck-mall')
+                                  | Trung t&acirc;m th&#x1B0;&#x1A1;ng m&#x1EA1;i
+                    // Filter More
+                    #filterMore.top-additional--filter.filter-more.filter-options-count(data-title='Thêm', data-option-count=0)
+                      .d-flex.align-items-center.filter__content
+                        .dropdown-toggle.filter--text.filter-more--text.text--center(data-toggle='dropdown') Th&ecirc;m
+                        .dropdown-menu.dropdown-menu-right
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content
+                              .land-square
+                                .dropdown-item--title.land-square--title Di&#x1EC7;n t&iacute;ch &dstrok;&#x1EA5;t
+                                .d-flex
+                                  .form-group.w-100.d-flex.align-items-center
+                                    input.filter-input-count#landSquare.form-control-range(type='range', value='0', min='0', max='150', step='1')
+                                    label.form-control-range-label(for='landSquare')
+                                      | 0+
+                                      | m&sup2;
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content
+                              .land-usable
+                                .dropdown-item--title.land-usable--title Di&#x1EC7;n s&#x1EED; d&#x1EE5;ng
+                                .d-flex
+                                  .form-group.w-100.d-flex.align-items-center
+                                    input.filter-input-count#landUsable.form-control-range(type='range', value='0', min='0', max='150', step='1')
+                                    label.form-control-range-label(for='landUsable')
+                                      | 0+
+                                      | m&sup2;
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content
+                              .land-size
+                                .land-size__container.d-flex
+                                  .w-50.land-size__width
+                                    .dropdown-item--title.land-size--title Chi&#x1EC1;u ngang
+                                    .d-flex
+                                      .form-group.w-100.d-flex.align-items-center
+                                        input.filter-input-count#landSizeWidth.form-control(type='text', placeholder='Ex: 8m')
+                                  .w-50.land-size__long
+                                    .dropdown-item--title.land-size--title.text-right Chi&#x1EC1;u d&#x1ECD;c
+                                    .d-flex
+                                      .form-group.w-100.d-flex.align-items-center.justify-content-end
+                                        input.filter-input-count#landSizeLong.form-control(type='text', placeholder='Ex: 8m')
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content
+                              .house-info
+                                .house-info__container.d-flex.justify-content-between
+                                  .w-30.house-bathroom
+                                    .dropdown-item--title.house-info--title Ph&ograve;ng t&#x1EAF;m
+                                    .d-flex
+                                      .form-group.w-100.d-flex.align-items-center
+                                        input.filter-input-count#houseBathroom.form-control(type='number', value='0')
+                                  .w-30.house-floor
+                                    .dropdown-item--title.house-info--title S&#x1ED1; t&#x1EA7;ng
+                                    .d-flex
+                                      .form-group.w-100.d-flex.align-items-center
+                                        input.filter-input-count#houseFloor.form-control(type='number', value='0')
+                                  .w-30.house-onroad
+                                    .dropdown-item--title.house-info--title M&#x1EB7;t ti&#x1EC1;n
+                                    input.filter-input-count#houseOnroad.form-control(type='checkbox')
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content
+                              .house-position
+                                .house-position__container
+                                  .dropdown-item--title.house-position--title H&#x1B0;&#x1EDB;ng
+                                  .house-position__content.d-flex.flex-wrap.align-items-center.justify-content-between
+                                    .d-flex.w-25
+                                      input.filter-input-count#housePositionEast.form-control(type='checkbox')
+                                      label.form-check-label(for='housePositionEast') &Dstrok;&ocirc;ng
+                                    .d-flex.w-25
+                                      input.filter-input-count#housePositionWest.form-control(type='checkbox')
+                                      label.form-check-label(for='housePositionWest') T&acirc;y
+                                    .d-flex.w-25
+                                      input.filter-input-count#housePositionSouth.form-control(type='checkbox')
+                                      label.form-check-label(for='housePositionSouth') Nam
+                                    .d-flex.w-25
+                                      input.filter-input-count#housePositionNorth.form-control(type='checkbox')
+                                      label.form-check-label(for='housePositionNorth') B&#x1EAF;c
+                                    .d-flex.w-25
+                                      input.filter-input-count#housePositionEastNorth.form-control(type='checkbox')
+                                      label.form-check-label(for='housePositionEastNorth')
+                                        | &Dstrok;&ocirc;ng
+                                        | B&#x1EAF;c
+                                    .d-flex.w-25
+                                      input.filter-input-count#housePositionWestNorth.form-control(type='checkbox')
+                                      label.form-check-label(for='housePositionWestNorth')
+                                        | T&acirc;y
+                                        | B&#x1EAF;c
+                                    .d-flex.w-25
+                                      input.filter-input-count#housePositionEastSouth.form-control(type='checkbox')
+                                      label.form-check-label(for='housePositionEastSouth')
+                                        | &Dstrok;&ocirc;ng
+                                        | Nam
+                                    .d-flex.w-25
+                                      input.filter-input-count#housePositionWestSouth.form-control(type='checkbox')
+                                      label.form-check-label(for='housePositionWestSouth')
+                                        | T&acirc;y
+                                        | Nam
+                          // dropdown item
+                          .dropdown-item
+                            .dropdown-item__content
+                              .filter-more__tags
+                                .dropdown-item--title.category-info--title T&#x1EEB; kho&aacute;
+                                .d-flex
+                                  input.filter-input-count(type='text', data-role='tagsinput')
+                    // END FILTER FOR PROPERTIES
+        // FILTERS MAP MODE
+        .filterBar__top--map-mode
+          .map-mode
+            .map-mode__container
+              .map-mode__content
+                .map-mode
+                  .row.mode__content
+                    .select-mode.mode-display B&#x1EA3;n &dstrok;&#x1ED3;
+                    .select-mode.mode-satellite V&#x1EC7; tinh
+      .w-100.filterBar__share
+        .share_content.d-flex.justify-content-end
+          .share--btn
+            img(src='../../../assets/img/ic-share-black.png', alt='')
+      .filterBar__view
+        .street-view
+          .street-view__container
+            .street-view__content
+              .street-view--item.outline-location
+                .street-view--btn.outline-location__content
+                  img(src='../../../assets/img/outline-location.png', alt='')
+              .street-view--item.baseline-view
+                .street-view--btn.baseline-view__content
+                  img(src='../../../assets/img/baseline-view.png', alt='')
+              .street-view--item.road-perspective
+                .street-view--btn.road-perspective__content
+                  span.fa.fa-road.icon
+              .street-view--item.baseline-trip
+                .street-view--btn.baseline-trip__content
+                  img(src='../../../assets/img/baseline-trip.png', alt='')

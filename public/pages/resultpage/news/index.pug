@@ -1,0 +1,393 @@
+//- NEWS PAGE
+extends ../layout-resultpages.pug
+block title
+  - var title = "Trang tin tức";
+  title= title
+block content
+  section.section__result-pages
+    .container-fluid.result-pages__container
+      .result-pages__header.layout-header
+        .result-pages__header-container.layout-header__container
+          .result-pages__header-top.layout-header__top
+            .d-flex.align-items-center.rp-header-top__container.lh-top__container
+              .rp-header-top__logo.lh-top__logo
+                .header-top--logo.lh-top--logo
+                  a(href='/')
+                    img(src='../../../assets/img/icon-asset.png', alt='')
+              .rp-header-top__search-input.lh-top__search-input
+                .search-input
+                  #autoComplete__content.w-100.input-search__content.collapsed
+                    input#autoComplete.form-control(type='text', placeholder='Search ...', tabindex='1')
+              .ml-auto.rp-header-top__menu.lh-top__menu
+                .d-flex.align-items-center.ht-menu__items
+                  .ht-menu--item.ht-menu--item__tools.ht-menu-tools.dropdown
+                    .menu-tools__btn-toggle.dropdown-toggle(data-toggle='dropdown')
+                      img.ht-menu--icon(src='../../../assets/img/Group 1.png', alt='')
+                    .menu-tools__dropdown-menu.dropdown-menu
+                      .mt--dropdown-item.dropdown-item
+                        a(href='#')
+                          img(src='../../../assets/img/Group 1569.png', alt='')
+                          span.ht-menu--text
+                            | T&iacute;nh
+                            | to&aacute;n
+                            | kho&#x1EA3;n
+                            | vay
+                      .mt--dropdown-item.dropdown-item
+                        a(href='#')
+                          img(src='../../../assets/img/baseline-insert_chart-24px.png', alt='')
+                          span.ht-menu--text
+                            | T&iacute;nh
+                            | to&aacute;n hi&#x1EC7;u qu&#x1EA3; d&#x1EF1; &aacute;n
+                      .mt--dropdown-item.dropdown-item
+                        a(href='#')
+                          img(src='../../../assets/img/baseline-monetization_on-24px.png', alt='')
+                          span.ht-menu--text T&agrave;i ch&iacute;nh c&aacute; nh&acirc;n
+                  .ht-menu--item
+                    .ht-menu__notify
+                      a(href='#')
+                        img.ht-menu--icon(src='../../assets/img/Group 22.png', alt='')
+                  .ht-menu--item
+                    a.ht-menu__login.menu-tools--btn-login(href='/dang-nhap')
+                      img.ht-menu--icon.ht-menu--icon-avatar(src='../../assets/img/icon-avatar.png', alt='')
+          .result-pages__header-navigation
+            .rp-header-navigation.header-navigation__container
+              .header-navigation__items.d-flex
+                .header-navigation--item
+                  a.hn-item--text(href='/ket-qua') T&#x1EA5;t c&#x1EA3;
+                .header-navigation--item
+                  a.hn-item--text(href='/ket-qua/thong-tin') Th&ocirc;ng tin
+                .header-navigation--item
+                  a.hn-item--text(href='/ban-do') B&#x1EA3;n &dstrok;&#x1ED3;
+                .header-navigation--item
+                  a.hn-item--text(href='/ket-qua/bang-gia') B&#x1EA3;ng gi&aacute;
+                .header-navigation--item.dropdown
+                  .hn-item--text.dropdown-toggle(data-toggle='dropdown') Th&ecirc;m
+                  .dropdown-menu.hn-menu__add
+                    .dropdown-item
+                      a(href='#') Danh b&#x1EA1;
+                    .dropdown-item
+                      a(href='#') T&agrave;i nguy&ecirc;n
+                    .dropdown-item
+                      a(href='#') H&#x1ECF;i &dstrok;&aacute;p
+          .result-pages__header-category
+            .rs-header-category.header-category__container
+              .search-result__category
+                .sr-category__container
+                  .sr-category__dropdown-items.dropdown.d-flex.align-items-center
+                    // CATEGORY ITEM
+                    .sr-category__dropdown-item
+                      a#dropdownNews.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Tin t&#x1EE9;c th&#x1EDD;i s&#x1EF1;
+                      .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownNews')
+                        a.dropdown-item(href='#') Tin t&#x1EE9;c
+                        a.dropdown-item(href='#') S&#x1EF1; ki&#x1EC7;n
+                    // CATEGORY ITEM
+                    .sr-category__dropdown-item
+                      a#dropdownExperience.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Ki&#x1EBF;n th&#x1EE9;c - Kinh Nghi&#x1EC7;m
+                      .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownExperience')
+                        a.dropdown-item(href='#') Ki&#x1EBF;n th&#x1EE9;c
+                        a.dropdown-item(href='#') Kinh nghi&#x1EC7;m
+                    // CATEGORY ITEM
+                    .sr-category__dropdown-item
+                      a#dropdownAnalytics.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Ph&acirc;n t&iacute;ch - Nh&#x1EAD;n &dstrok;&#x1ECB;nh
+                      .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownAnalytics')
+                        a.dropdown-item(href='#') Ph&acirc;n t&iacute;ch
+                        a.dropdown-item(href='#') Nh&#x1EAD;n &dstrok;&#x1ECB;nh
+                    // CATEGORY ITEM
+                    .sr-category__dropdown-item
+                      a#dropdownUserComment.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | G&oacute;c nh&igrave;n b&#x1EA1;n &dstrok;&#x1ECD;c
+                      .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownUserComment')
+                        a.dropdown-item(href='#') G&oacute;c nh&igrave;n b&#x1EA1;n &dstrok;&#x1ECD;c
+                    // CATEGORY ITEM
+                    .sr-category__dropdown-item
+                      a#dropdownOverSea.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Nh&igrave;n ra th&#x1EBF; gi&#x1EDB;i
+                      .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownOverSea')
+                        a.dropdown-item(href='#') Anh
+                        a.dropdown-item(href='#') M&#x1EF9;
+                        a.dropdown-item(href='#') &Uacute;c
+                        a.dropdown-item(href='#') Nh&#x1EAD;t
+                        a.dropdown-item(href='#') Singapore
+                    // CATEGORY ITEM
+                    .sr-category__dropdown-item
+                      a#dropdownFirstHouse.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | C&aacute;ch mua c&abreve;n nh&agrave; &dstrok;&#x1EA7;u ti&ecirc;n
+                      .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownFirstHouse')
+                        a.dropdown-item(href='#') C&aacute;ch mua c&abreve;n nh&agrave; &dstrok;&#x1EA7;u ti&ecirc;n
+              .search-result__header-text
+                span
+                  | Kho&#x1EA3;ng 
+                  span.fw-5 1.782
+                  |  k&#x1EBF;t qu&#x1EA3;
+      .result-pages__body
+        .result-pages__body-container.container
+          .result-pages__search-result
+            .rp-search-result__items
+              // SEARCH RESULT ITEM
+              .rp-search-result-item
+                .search-result__item-container.d-flex
+                  img.sr-item__modal(src='../../../assets/img/icon-modal.png')
+                  .sr-item__poster
+                    .poster--avatar
+                      a(href='#')
+                        img(src='../../../assets/img/Rectangle 97.png', alt='')
+                  .sr-item__details
+                    .item-details__container
+                      .item-details__title
+                        .ids-title__content
+                          .ids-title--header.d-flex
+                            a.title--name(href='#') Asset News
+                            .title--rate.d-flex.align-items-center
+                              span [Chung c&#x1B0; 
+                              span.title_rate--highlight  4,5+ 
+                              img(src='../../assets/img/star.png', alt='')
+                              | ]
+                          p.mb-0.ids-title--category
+                            | &dstrok;&atilde; &dstrok;&abreve;ng m&#x1ED9;t b&agrave;i vi&#x1EBF;t trong 
+                            a.ids-title--category(href='/ket-qua/thong-tin') Th&ocirc;ng tin
+                          p.mb-0.ids-title--date-posted 15 ng&agrave;y tr&#x1B0;&#x1EDB;c
+                      .item-details__post
+                        .ids-post--title
+                          a(href='#') T&ograve;a nh&agrave; L&yacute; Ch&iacute;nh Th&#x1EAF;ng &dstrok;ang trong giai &dstrok;o&#x1EA1;n ho&agrave;n thi&#x1EC7;n
+                        .ids-post--content
+                          span
+                            | Ng&agrave;y 10-12/05: C&oacute; 123 th&ocirc;ng b&aacute;o k&#x1EBF; ho&#x1EA1;ch l&#x1EF1;a ch&#x1ECD;n nh&agrave; th&#x1EA7;u ch&#x1EAD;m .... 1527/Q&Dstrok;-UBND ng&agrave;y
+                            | 14/02/2019; KHLCNT c&#x1EE7;a Ban Qu&#x1EA3;n l&yacute; d&#x1EF1; &aacute;n &dstrok;&#x1EA7;u t&#x1B0; x&acirc;y .... KHLCNT c&#x1EE7;a S&#x1EDF; T&agrave;i ch&iacute;nh t&#x1EC9;nh H&#x1B0;ng
+                            | &mldr;. cho d&#x1EF1; &aacute;n &ldquo;Mua s&#x1EAF;m thi&#x1EBF;t b&#x1ECB; &dstrok;&#x1ECB;nh .... H&#x1EA1;ng m&#x1EE5;c: X&oacute;m Ao V&agrave;ng, C&#x1ED5; R&ugrave;a, G&ograve; Ch&egrave;, Ph&uacute;c L&#x1ED9;c,
+                            | Quy&#x1EBF;t Th&#x1EAF;ng, T&acirc;n ...
+                      .item-details__actions
+                        .ids-actions__content.d-flex.justify-content-end.align-items-center
+                          .ids-actions__item.ids-actions__comment
+                            img.ids-action--icon(src='../../../assets/img/ic_chat_bubble_outline_black_24px.png', alt='')
+                            span.ids-action--statistic 12
+                          .ids-actions__item.ids-actions__liked
+                            img.ids-action--icon(src='../../../assets/img/ic_like_black_24px.png', alt='')
+                            span.ids-action--statistic 298
+                          .ids-actions__item.ids-actions__shared
+                            img.ids-action--icon(src='../../../assets/img/ic_share_black_24px.png', alt='')
+                            span.ids-action--statistic 26
+              // SEARCH RESULT ITEM
+              .rp-search-result-item
+                .search-result__item-container.d-flex
+                  img.sr-item__modal(src='../../../assets/img/icon-modal.png')
+                  .sr-item__poster
+                    .poster--avatar
+                      a(href='#')
+                        img(src='../../../assets/img/1pcs-hot-kawaii-small-teddy-bears-plush-toys.png', alt='')
+                  .sr-item__details
+                    .item-details__container
+                      .item-details__title
+                        .ids-title__content
+                          .ids-title--header.d-flex
+                            a.title--name(href='#') Duc Le
+                            .title--rate.d-flex.align-items-center
+                              span [Chung c&#x1B0; 
+                              span.title_rate--highlight  3,5+ 
+                              img(src='../../assets/img/star.png', alt='')
+                              | ]
+                          p.mb-0.ids-title--category
+                            | &dstrok;&atilde; &dstrok;&abreve;ng m&#x1ED9;t b&agrave;i vi&#x1EBF;t trong 
+                            a.ids-title--category(href='/ket-qua/thong-tin') Th&ocirc;ng tin
+                          p.mb-0.ids-title--date-posted 10 ng&agrave;y tr&#x1B0;&#x1EDB;c
+                      .item-details__post
+                        .ids-post--title
+                          a(href='#') L&yacute; Ch&iacute;nh Th&#x1EAF;ng khu &dstrok;&ocirc; th&#x1ECB; t&#x1B0;&#x1A1;ng lai &dstrok;ang trong giai &dstrok;o&#x1EA1;n ho&agrave;n thi&#x1EC7;n
+                        .ids-post--content
+                          span
+                            | Ng&agrave;y 10-12/05: C&oacute; 123 th&ocirc;ng b&aacute;o k&#x1EBF; ho&#x1EA1;ch l&#x1EF1;a ch&#x1ECD;n nh&agrave; th&#x1EA7;u ch&#x1EAD;m .... 1527/Q&Dstrok;-UBND ng&agrave;y
+                            | 14/02/2019; KHLCNT c&#x1EE7;a Ban Qu&#x1EA3;n l&yacute; d&#x1EF1; &aacute;n &dstrok;&#x1EA7;u t&#x1B0; x&acirc;y .... KHLCNT c&#x1EE7;a S&#x1EDF; T&agrave;i ch&iacute;nh t&#x1EC9;nh H&#x1B0;ng
+                            | &mldr;. cho d&#x1EF1; &aacute;n &ldquo;Mua s&#x1EAF;m thi&#x1EBF;t b&#x1ECB; &dstrok;&#x1ECB;nh .... H&#x1EA1;ng m&#x1EE5;c: X&oacute;m Ao V&agrave;ng, C&#x1ED5; R&ugrave;a, G&ograve; Ch&egrave;, Ph&uacute;c L&#x1ED9;c,
+                            | Quy&#x1EBF;t Th&#x1EAF;ng, T&acirc;n ...
+                      .item-details__actions
+                        .ids-actions__content.d-flex.justify-content-end.align-items-center
+                          .ids-actions__item.ids-actions__comment
+                            img.ids-action--icon(src='../../../assets/img/ic_chat_bubble_outline_black_24px.png', alt='')
+                            span.ids-action--statistic 12
+                          .ids-actions__item.ids-actions__liked
+                            img.ids-action--icon(src='../../../assets/img/ic_like_black_24px.png', alt='')
+                            span.ids-action--statistic 298
+                          .ids-actions__item.ids-actions__shared
+                            img.ids-action--icon(src='../../../assets/img/ic_share_black_24px.png', alt='')
+                            span.ids-action--statistic 26
+            .rp-search-result__pagination
+              .search-result__pagination-container.container
+                .search-result__pagination-content.d-flex.align-items-center.justify-content-center.justify-content-sm-end
+                  a.sr-pagination--btn.sr-pagination--previous(href='#') Tr&#x1B0;&#x1EDB;c
+                  .sr-pagination__items.d-flex.align-items-center
+                    a.sr-pagination--item.is-actived(href='#') 1
+                    a.sr-pagination--item(href='#') 2
+                    a.sr-pagination--item(href='#') 3
+                    a.sr-pagination--item(href='#') 4
+                    a.sr-pagination--item(href='#') 5
+                  a.sr-pagination--btn.sr-pagination--next(href='#') Ti&#x1EBF;p
+      .result-pages__footer.layout-footer
+        .result-pages__footer-container
+          .rs-footer__links.layout-footer__links.d-flex.justify-content-center.justify-content-lg-start
+            .rs-footer--link.layout-footer--link
+              a(href='#') Gi&#x1EDB;i thi&#x1EC7;u
+            .rs-footer--link.layout-footer--link
+              a(href='#') H&#x1B0;&#x1EDB;ng d&#x1EAB;n
+          // Desktop
+          .rs-footer__quick-views.layout-footer__quick-views.d-none.d-lg-flex
+            .rs-footer__quick-view.layout-footer--quick-view.w-50
+              marquee
+                .quick-view__content
+                  span
+                    span.quick-view--title Tin nhanh 1: 
+                    |  Lorem Ipsum. Proin gravida nibh vel velit
+                    |                     auctor aliquet. Aenean
+                    |                     sollicitudin, lorem quis biben 
+                    a(href='#') Xem nhanh
+            .rs-footer__quick-view.layout-footer--quick-view.w-50
+              marquee
+                .quick-view__content
+                  span
+                    span.quick-view--title Tin nhanh 2: 
+                    |  Lorem Ipsum. Proin gravida nibh vel velit
+                    |                     auctor aliquet. Aenean
+                    |                     sollicitudin, lorem quis biben 
+                    a(href='#') Xem nhanh
+          // Mobile
+          .rs-footer__quick-views.layout-footer__quick-views.d-flex.d-lg-none
+            .rs-footer__quick-view.layout-footer--quick-view
+              marquee
+                .quick-view__content.d-inline-flex
+                  span
+                    span.quick-view--title Tin nhanh 1: 
+                    |  Lorem Ipsum. Proin gravida nibh vel velit
+                    |                     auctor aliquet. Aenean
+                    |                     sollicitudin, lorem quis biben 
+                    a(href='#') Xem nhanh
+                .quick-view__content.d-inline-flex
+                  span
+                    span.quick-view--title Tin nhanh 2: 
+                    |  Lorem Ipsum. Proin gravida nibh vel velit
+                    |                     auctor aliquet. Aenean
+                    |                     sollicitudin, lorem quis biben 
+                    a(href='#') Xem nhanh
+    // CHAT SIDEBAR
+    #chat-sidebar.d-none.d-lg-block.chat-sidebar.collapsed
+      .chat-sidebar__container
+        .chat-sidebar__content.d-flex.flex-column.justify-content-between
+          // Chat Sidebar Top
+          .chat-sidebar__top
+            .chat-sidebar--btn-collapse
+              .btn-expand__content
+                button#btn-chat--expand.btn.btn-chat--expand
+                  img(src='../../assets/img/Path 115.png', alt='')
+          // Chat Sidebar Bottom
+          .chat-sidebar__bottom
+            // Chat list
+            .chat-sidebar__list.chat-list
+              .chat-list__container
+                .chat-list__content
+                  .chat-list__contact
+                    .chat-list--contact-items
+                      // Contact items
+                      .contact-items.contact-items__active
+                        // Contact item
+                        .contact-item.d-flex.justify-content-center
+                          .contact-item--avatar
+                            img(src='../../assets/img/chat-avt-1.png', alt='')
+                          .contact-item--name L&ecirc; &Aacute;nh H&#x1ED3;ng Nga
+                          .contact-item--status
+                            img(src='../../assets/img/icon-chat-active.png', alt='')
+                        // Contact item
+                        .contact-item.d-flex.justify-content-center
+                          .contact-item--avatar
+                            img(src='../../assets/img/chat-avt-2.png', alt='')
+                          .contact-item--name Peter Parker
+                          .contact-item--status
+                            img(src='../../assets/img/icon-chat-active.png', alt='')
+                        // Contact item
+                        .contact-item.d-flex.justify-content-center
+                          .contact-item--avatar
+                            img(src='../../assets/img/chat-avt-3.png', alt='')
+                          .contact-item--name Tom Hank
+                          .contact-item--status
+                            img(src='../../assets/img/icon-chat-active.png', alt='')
+                        // Contact item
+                        .contact-item.d-flex.justify-content-center
+                          .contact-item--avatar
+                            img(src='../../assets/img/chat-avt-4.png', alt='')
+                          .contact-item--name Amy Lee Johnson
+                          .contact-item--status
+                            img(src='../../assets/img/icon-chat-active.png', alt='')
+                        // Contact item
+                        .contact-item.d-flex.justify-content-center
+                          .contact-item--avatar
+                            img(src='../../assets/img/chat-avt-5.png', alt='')
+                          .contact-item--name Picasa Poo
+                          .contact-item--status
+                            img(src='../../assets/img/icon-chat-active.png', alt='')
+                      // Contact items
+                      .contact-items.contact-items__inactive
+                        // Contact item
+                        .contact-item.d-flex.justify-content-center
+                          .contact-item--avatar
+                            img(src='../../assets/img/chat-avt-6.png', alt='')
+                          .contact-item--name Jessica Snow
+                          .contact-item--status
+                            img(src='../../assets/img/icon-chat-active.png', alt='')
+            // Chat message
+            .chat-sidebar__chat-message
+              .chat-message__container
+                .chat-message__content
+                  .chat-message.d-flex.justify-content-center.align-items-center
+                    .chat-message--icon
+                      img(src='../../assets/img/chat-message.png', alt='')
+            // Chat Search
+            .chat-sidebar__search-input
+              .search-input
+                .search-input__container
+                  .search-input__content
+                    .input-group
+                      .input-group-prepend
+                        .search-icon
+                          img(src='../../assets/img/SVG/search.svg', alt='')
+                      input.form-control(type='text', placeholder='Tìm kiếm bạn bè', aria-label='Username', aria-describedby='basic-addon1')
+            // Chat pop-up
+            #chat-sidebar__pop-up
+              .chat-popup
+                .chat-popup__container
+                  .chat-popup__content
+                    #chat-popup__items.chat-popup__items
+                      .chat-popup--item
+                        .chat-popup--header.d-flex
+                          .chat-popup--status
+                            img(src='../../assets/img/icon-chat-active.png', alt='')
+                          span.ml-2.header--text Test
+                          .chat-popup--close &times;
+                        .chat-popup--body
+                          .message-received
+                            .message-received__content.row
+                              .col-2.px-0.received__content--icon
+                                img(src='../../assets/img/chat-avt-1.png', alt='')
+                              .col-10.received__content--text
+                                span
+                                  | KHLCNT c&#x1EE7;a Ban Qu&#x1EA3;n l&yacute; d&#x1EF1; &aacute;n &dstrok;&#x1EA7;u t&#x1B0; x&acirc;y .... KHLCNT c&#x1EE7;a S&#x1EDF; T&agrave;i ch&iacute;nh t&#x1EC9;nh H&#x1B0;ng Y&ecirc;n
+                                  | cho d&#x1EF1;
+                                  | &aacute;n &ldquo;Mua s&#x1EAF;m thi&#x1EBF;t b&#x1ECB; &dstrok;&#x1ECB;nh .... H&#x1EA1;ng m&#x1EE5;c: X&oacute;m Ao V&agrave;ng, C&#x1ED5; R&ugrave;a, G&ograve; Ch&egrave;, Ph&uacute;c L&#x1ED9;c, Quy&#x1EBF;t
+                                  | Th&#x1EAF;ng, T&acirc;n ...
+                              .col-12.received__content--time.text-right
+                                span 12:09 - 18/10/2019
+                          .message-send
+                            .message-send__content.row.align-items-end.flex-column
+                              .message-send--text
+                                span OK
+                              .message-send--time.text-right
+                                span 1 min
+                        .chat-popup--input
+                          .input-group
+                            input.form-control(type='text', placeholder='Nhập tin nhắn', aria-label='Username', aria-describedby='basic-addon1')
+                            .input-group-append
+                              .send-icon
+                                img(src='../../assets/img/icon-send.png', alt='')
+block append body_scripts
+  script(src='../../assets/scripts/chat/index.js')
+  script(src='../../vendor/auto-complete/autocomplete.js')
+  script(src='../../assets/scripts/resultpage/generic.js')
+  script(src='./../assets/scripts/resultpage/resultpage-autocomplete.js')

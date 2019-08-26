@@ -1,0 +1,137 @@
+//- Signin Page
+extends ./layout-logpages.pug
+block title
+  - var title = "Đăng nhập";
+  title= title
+block content
+  .section-signin
+    .container-fluid.signin
+      .signin-content
+        .signinpage__header.layout-header
+          .signinpage__header-container.layout-header__container
+            .signinpage__header-top.layout-header__top
+              .d-flex.align-items-center.sig-header-top__container.lh-top__container
+                .rp-header-top__logo.lh-top__logo
+                  .header-top--logo.lh-top--logo
+                    a(href='/')
+                      img(src='../../../assets/img/icon-asset.png', alt='')
+                .ml-auto.sig-header-top__menu.lh-top__menu
+                  .d-flex.align-items-center.ht-menu__items
+                    .ht-menu--item.d-none.d-lg-block
+                      a(href='/ket-qua/thong-tin') Th&ocirc;ng tin
+                    .ht-menu--item.d-none.d-lg-block
+                      a(href='/ban-do') B&#x1EA3;n &dstrok;&#x1ED3;
+                    .ht-menu--item.d-none.d-lg-block
+                      a(href='/ket-qua/bang-gia') B&#x1EA3;ng gi&aacute;
+                    .ht-menu--item.dropdown.d-none.d-lg-block
+                      .dropdown-toggle(data-toggle='dropdown') Th&ecirc;m
+                      .dropdown-menu.ht-menu__add
+                        .dropdown-item
+                          a(href='#') Danh b&#x1EA1;
+                        .dropdown-item
+                          a(href='#') T&agrave;i nguy&ecirc;n
+                        .dropdown-item
+                          a(href='#') H&#x1ECF;i &dstrok;&aacute;p
+                    .ht-menu--item.ht-menu--item__tools.ht-menu-tools.dropdown
+                      .menu-tools__btn-toggle.dropdown-toggle(data-toggle='dropdown')
+                        img.ht-menu--icon(src='../../../assets/img/Group 1.png', alt='')
+                      .menu-tools__dropdown-menu.dropdown-menu
+                        .mt--dropdown-item.dropdown-item
+                          a(href='#')
+                            img(src='../../../assets/img/Group 1569.png', alt='')
+                            span.ht-menu--text
+                              | T&iacute;nh
+                              | to&aacute;n
+                              | kho&#x1EA3;n
+                              | vay
+                        .mt--dropdown-item.dropdown-item
+                          a(href='#')
+                            img(src='../../../assets/img/baseline-insert_chart-24px.png', alt='')
+                            span.ht-menu--text
+                              | T&iacute;nh
+                              | to&aacute;n hi&#x1EC7;u qu&#x1EA3; d&#x1EF1; &aacute;n
+                        .mt--dropdown-item.dropdown-item
+                          a(href='#')
+                            img(src='../../../assets/img/baseline-monetization_on-24px.png', alt='')
+                            span.ht-menu--text T&agrave;i ch&iacute;nh c&aacute; nh&acirc;n
+                    .ht-menu--item
+                      .ht__menu-notify
+                        a(href='#')
+                          img.ht-menu--icon(src='../../assets/img/Group 22.png', alt='')
+                    .ht-menu--item
+                      a.ht-menu__login.menu-tools--btn-login.btn.btn-primary(href='/dang-ki') &Dstrok;&abreve;ng k&iacute;
+        .logpages-body.login-body
+          .logpages-body__container.h-100
+            .logpages-body__content.h-100.d-flex.flex-column.justify-content-center
+              .login-form.d-flex.justify-content-center
+                .login-form__content
+                  // Login Form
+                  .form-header.d-flex.justify-content-center
+                    .form-header__content
+                      .form-header--title
+                        span &Dstrok;&abreve;ng nh&#x1EAD;p
+                  form
+                    .form-group.login-form__group
+                      input#username.form-control(type='text', name='username', placeholder='Tên người dùng')
+                    .form-group.login-form__group.mb-1
+                      input#password.form-control(type='text', name='password', placeholder='Mật khẩu')
+                    .login-form__actions
+                      .login-form__logs
+                        .row
+                          .col-6
+                            .form-group
+                              input#check-remember(type='checkbox', name='check-remember')
+                              label.remember-text(for='check-remember') L&#x1B0;u m&#x1EAD;t kh&#x1EA9;u
+                          .col-6.text-right
+                            a(href='#') Qu&ecirc;n m&#x1EAD;t kh&#x1EA9;u
+                      .login-form__action
+                        .row
+                          .col-6.d-flex.align-items-center
+                            a(href='/dang-ki') &Dstrok;&abreve;ng k&iacute;
+                          .col-6.text-right
+                            button.btn.btn-primary.btn-login(type='submit') &Dstrok;&abreve;ng nh&#x1EAD;p
+        //- LOGPAGES FOOTER
+        .logpages__footer.layout-footer
+          .logpages__footer-container
+            .hp-footer__links.layout-footer__links.d-flex.justify-content-center.justify-content-lg-start
+              .hp-footer--link.layout-footer--link
+                a(href='#') Gi&#x1EDB;i thi&#x1EC7;u
+              .hp-footer--link.layout-footer--link
+                a(href='#') H&#x1B0;&#x1EDB;ng d&#x1EAB;n
+            // Desktop Display
+            .hp-footer__quick-views.layout-footer__quick-views.d-none.d-lg-flex
+              .hp-footer__quick-view.layout-footer--quick-view.w-50
+                marquee
+                  .quick-view__content
+                    span
+                      span.quick-view--title Tin nhanh 1: 
+                      |  Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                      |                     sollicitudin, lorem quis biben 
+                      a(href='#') Xem nhanh
+              .hp-footer__quick-view.layout-footer--quick-view.w-50
+                marquee
+                  .quick-view__content
+                    span
+                      span.quick-view--title Tin nhanh 2: 
+                      |  Lorem Ipsum. Proin gravida nibh vel velit
+                      |                     auctor aliquet. Aenean
+                      |                     sollicitudin, lorem quis biben 
+                      a(href='#') Xem nhanh
+            // Mobile Display
+            .hp-footer__quick-views.layout-footer__quick-views.d-flex.d-lg-none
+              .hp-footer__quick-view.layout-footer--quick-view
+                marquee
+                  .quick-view__content.d-inline-flex
+                    span
+                      span.quick-view--title Tin nhanh 1: 
+                      |  Lorem Ipsum. Proin gravida nibh vel velit
+                      |                     auctor aliquet. Aenean
+                      |                     sollicitudin, lorem quis biben 
+                      a(href='#') Xem nhanh
+                  .quick-view__content.d-inline-flex
+                    span
+                      span.quick-view--title Tin nhanh 2: 
+                      |  Lorem Ipsum. Proin gravida nibh vel velit
+                      |                     auctor aliquet. Aenean
+                      |                     sollicitudin, lorem quis biben 
+                      a(href='#') Xem nhanh

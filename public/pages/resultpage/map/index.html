@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trang bản đồ</title>
+    <!-- VENDORS STYLES-->
+    <link rel="stylesheet" href="../../vendor/ap8/css/style.css">
+    <link rel="stylesheet" href="../../vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../vendor/bootstrap-toogle/bootstrap4-toggle.min.css">
+    <link rel="stylesheet" href="../../../assets/stylesheets/partials/map/bootstrap-tagsinput.css">
+    <!-- INCLUDES STYLES-->
+    <link rel="stylesheet" href="../../assets/stylesheets/index.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/pages/_resultpages.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/partials/map/filter-bar.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/partials/map/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/partials/chat/index.css">
+    <link rel="stylesheet" type="text/css" href="../../../vendor/io-rangescroll/css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="../../../assets/stylesheets/pages/_map.css">
+    <!-- INCLUDES SCRIPTS-->
+    <link rel="stylesheet" type="text/css" href="../../../assets/stylesheets/style.css">
+    <script src="../../vendor/jquery/jquery-3.2.1.slim.min.js"></script>
+    <script src="../../vendor/popper.js/popper.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../vendor/bootstrap-toogle/bootstrap4-toggle.min.js"></script>
+    <script type="text/javascript" src="../../../vendor/io-rangescroll/js/ion.rangeSlider.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid d-none d-xl-block">
+        <div class="box-map-flow">
+            <div class="bd-sidebar section-map__result">
+                <div class="map-result-container">
+                    <div class="w-100 input-search__content collapsed" id="autoComplete__content">
+                        <div class="search-input-container d-flex align-items-center">
+                            <div class="search-menu">
+                                <button class="drawer-toggler" data-toggle="modal" data-target="#drawerToggleExternalContent" aria-controls="drawerToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><img src="../../../assets/img/SVG/menu.svg" alt=""></button>
+                            </div>
+                            <div class="search-input">
+                                <div>
+                                    <input class="form-control" id="autoComplete" type="text" placeholder="Search ..." tabindex="1">
+                                </div>
+                            </div>
+                            <div class="search-icon"><img src="../../../assets/img/SVG/search.svg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="search-filter-container ml-2">
+                        <div class="dropdown">
+                            <button class="btn search-filter--btn" id="dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sắp xếp theo <span class="fa fa-caret-down"></span></button>
+                            <div class="dropdown-menu py-2" aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown-item px-2 py-2">Action</div>
+                                <div class="dropdown-item px-2 py-2">Another action</div>
+                                <div class="dropdown-item px-2 py-2">Something else here</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-result-container">
+                        <!-- Search result item-->
+                        <div class="search-result__item active">
+                            <div class="row item-container">
+                                <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                                    <div class="sr-item__favorite"><img src="../../../assets/img/icon-favorite.png" alt=""></div>
+                                    <div class="sr-item__non-favorite"><img src="../../../assets/img/icon-non-favorite.png" alt=""></div>
+                                </div>
+                                <div class="col-8 item-details">
+                                    <div class="row item-price">
+                                        <p class="border-right price">7,5 tri&#x1EC7;u</p>
+                                        <p class="border-right acreage">60,78m2</p>
+                                        <p class="ratio">10 x 6,8m</p>
+                                    </div>
+                                    <div class="item-type">
+                                        <p>C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;</p>
+                                    </div>
+                                    <div class="row item-info">
+                                        <p class="border-right">Thu&ecirc;</p>
+                                        <p class="border-right">S&#x1ED1; t&#x1EDD; 30</p>
+                                        <p>S&#x1ED1; th&#x1EED;a - -</p>
+                                    </div>
+                                    <div class="row item-detail">
+                                        <p><img src="../../../assets/img/SVG/bed.svg" alt=""> 10</p>
+                                        <p><img src="../../../assets/img/SVG/shower.svg" alt=""> 20</p>
+                                        <p><img src="../../../assets/img/SVG/direction.svg" alt=""> &Dstrok;&ocirc;ng Nam</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Search result item-->
+                        <div class="search-result__item">
+                            <div class="row item-container">
+                                <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                                    <div class="sr-item__favorite"><img src="../../../assets/img/icon-favorite.png" alt=""></div>
+                                    <div class="sr-item__non-favorite"><img src="../../../assets/img/icon-non-favorite.png" alt=""></div>
+                                </div>
+                                <div class="col-8 item-details">
+                                    <div class="row item-price">
+                                        <p class="border-right price">7,5 tri&#x1EC7;u</p>
+                                        <p class="border-right acreage">60,78m2</p>
+                                        <p class="ratio">10 x 6,8m</p>
+                                    </div>
+                                    <div class="item-type">
+                                        <p>C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;</p>
+                                    </div>
+                                    <div class="row item-info">
+                                        <p class="border-right status -thue">Thu&ecirc;</p>
+                                        <p class="border-right">S&#x1ED1; t&#x1EDD; 30</p>
+                                        <p>S&#x1ED1; th&#x1EED;a - -</p>
+                                    </div>
+                                    <div class="row item-detail">
+                                        <p><img src="../../../assets/img/SVG/bed.svg" alt=""> 10</p>
+                                        <p><img src="../../../assets/img/SVG/shower.svg" alt=""> 20</p>
+                                        <p><img src="../../../assets/img/SVG/direction.svg" alt=""> &Dstrok;&ocirc;ng Nam</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Search result item-->
+                        <div class="search-result__item">
+                            <div class="row item-container">
+                                <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                                    <div class="sr-item__favorite"><img src="../../../assets/img/icon-favorite.png" alt=""></div>
+                                    <div class="sr-item__non-favorite"><img src="../../../assets/img/icon-non-favorite.png" alt=""></div>
+                                </div>
+                                <div class="col-8 item-details">
+                                    <div class="row item-price">
+                                        <p class="border-right price">7,5 tri&#x1EC7;u</p>
+                                        <p class="border-right acreage">60,78m2</p>
+                                        <p class="ratio">10 x 6,8m</p>
+                                    </div>
+                                    <div class="item-type">
+                                        <p>C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;</p>
+                                    </div>
+                                    <div class="row item-info">
+                                        <p class="border-right status -bán">Bán</p>
+                                        <p class="border-right">S&#x1ED1; t&#x1EDD; 30</p>
+                                        <p>S&#x1ED1; th&#x1EED;a - -</p>
+                                    </div>
+                                    <div class="row item-detail">
+                                        <p><img src="../../../assets/img/SVG/bed.svg" alt=""> 10</p>
+                                        <p><img src="../../../assets/img/SVG/shower.svg" alt=""> 20</p>
+                                        <p><img src="../../../assets/img/SVG/direction.svg" alt=""> &Dstrok;&ocirc;ng Nam</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Search result item-->
+                        <div class="search-result__item">
+                            <div class="row item-container">
+                                <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                                    <div class="sr-item__favorite"><img src="../../../assets/img/icon-favorite.png" alt=""></div>
+                                    <div class="sr-item__non-favorite"><img src="../../../assets/img/icon-non-favorite.png" alt=""></div>
+                                </div>
+                                <div class="col-8 item-details">
+                                    <div class="row item-price">
+                                        <p class="border-right price">7,5 tri&#x1EC7;u</p>
+                                        <p class="border-right acreage">60,78m2</p>
+                                        <p class="ratio">10 x 6,8m</p>
+                                    </div>
+                                    <div class="item-type">
+                                        <p>C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;</p>
+                                    </div>
+                                    <div class="row item-info">
+                                        <p class="border-right status -ban">Bán</p>
+                                        <p class="border-right">S&#x1ED1; t&#x1EDD; 30</p>
+                                        <p>S&#x1ED1; th&#x1EED;a - -</p>
+                                    </div>
+                                    <div class="row item-detail">
+                                        <p><img src="../../../assets/img/SVG/bed.svg" alt=""> 10</p>
+                                        <p><img src="../../../assets/img/SVG/shower.svg" alt=""> 20</p>
+                                        <p><img src="../../../assets/img/SVG/direction.svg" alt=""> &Dstrok;&ocirc;ng Nam</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Search result item-->
+                        <div class="search-result__item">
+                            <div class="row item-container">
+                                <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                                    <div class="sr-item__favorite"><img src="../../../assets/img/icon-favorite.png" alt=""></div>
+                                    <div class="sr-item__non-favorite"><img src="../../../assets/img/icon-non-favorite.png" alt=""></div>
+                                </div>
+                                <div class="col-8 item-details">
+                                    <div class="row item-price">
+                                        <p class="border-right price">7,5 tri&#x1EC7;u</p>
+                                        <p class="border-right acreage">60,78m2</p>
+                                        <p class="ratio">10 x 6,8m</p>
+                                    </div>
+                                    <div class="item-type">
+                                        <p>C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;</p>
+                                    </div>
+                                    <div class="row item-info">
+                                        <p class="border-right">Thu&ecirc;</p>
+                                        <p class="border-right">S&#x1ED1; t&#x1EDD; 30</p>
+                                        <p>S&#x1ED1; th&#x1EED;a - -</p>
+                                    </div>
+                                    <div class="row item-detail">
+                                        <p><img src="../../../assets/img/SVG/bed.svg" alt=""> 10</p>
+                                        <p><img src="../../../assets/img/SVG/shower.svg" alt=""> 20</p>
+                                        <p><img src="../../../assets/img/SVG/direction.svg" alt=""> &Dstrok;&ocirc;ng Nam</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MAP MAINT CONTENT-->
+            <main class="bd-content section-map__content" style="background-image: url('../../../assets/img/map.png')">
+                <div class="map__content">
+                    <div id="map_canvas"></div>
+                    <!-- FILTER BAR FOR MAP-->
+                    <div id="filterBar">
+                        <div class="filterBar__container">
+                            <div class="filterbar__content">
+                                <div class="filterBar__top">
+                                    <div class="top-additional__content">
+                                        <!-- Filter Type-->
+                                       
+                                        <!-- FILTERS FOR PROJECT-->
+                                        <div class="top-additional--filter filter-type" id="filterType">
+                                            <div class="filter--text filter-type--text" style="display: inline-block;width: auto;padding-left: 5px;padding-right: 0px;vertical-align: middle;" id="filter-type">Dự án</div>
+                                            <div class="btn-switch"  style="display: inline-block;vertical-align: middle;" >
+                                                <div class="btn-switch__content align-items-center">
+                                                    <input id="filter__switch-type" type="checkbox" checked="" data-toggle="toggle" data-on="Dự án" data-off="BĐS" data-style="btn-switch__input" data-width="49" data-height="18">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters-project show"  id="filters-project">
+                                            <!-- Filter Category-->
+                                            
+                                            <div class="col5">
+                                                <div class="top-additional--filter filter-category filter-options-total" id="filterCategory" data-title="Loại dự án">
+                                                    <div class="align-items-center filter__content">
+                                                        <div class="dropdown-toggle text-center" data-toggle="dropdown"><span class="filter--text filter-category--text" style="max-width: 125px;">Lo&#x1EA1;i d&#x1EF1; &aacute;n</span></div>
+                                                        <div class="dropdown-menu">
+                                                            <!-- dropdown item-->
+                                                            <div class="dropdown-item">
+                                                                <div class="dropdown-item__content input-group">
+                                                                    <div class="form-check dropdown-item--checkbox">
+                                                                        <input class="form-check-input" id="dropdownCheck-apartment" type="checkbox">
+                                                                        <label class="form-check-label" for="dropdownCheck-apartment">Chung C&#x1B0;</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- dropdown item-->
+                                                            <div class="dropdown-item">
+                                                                <div class="dropdown-item__content input-group">
+                                                                    <div class="form-check dropdown-item--checkbox">
+                                                                        <input class="form-check-input" id="dropdownCheck-city" type="checkbox">
+                                                                        <label class="form-check-label" for="dropdownCheck-city">&Dstrok;&ocirc; th&#x1ECB;</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- dropdown item-->
+                                                            <div class="dropdown-item">
+                                                                <div class="dropdown-item__content input-group">
+                                                                    <div class="form-check dropdown-item--checkbox">
+                                                                        <input class="form-check-input" id="dropdownCheck-resort" type="checkbox">
+                                                                        <label class="form-check-label" for="dropdownCheck-resort">Ngh&#x1EC9; d&#x1B0;&#x1EE1;ng</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col5">
+                                                <!-- Filter Price-->
+                                                <div class="top-additional--filter filter-price" id="filterPrice">
+                                                    <div class="align-items-center filter__content">
+                                                        <div class="dropdown-toggle d-flex" data-toggle="dropdown"> <span class="filter--text filter-category--text text-center" style="max-width: 110px;">M&#x1EE9;c gi&aacute;</span></div>
+                                                        <div class="dropdown-menu">
+                                                            <div class="pricelist-range__container">
+                                                                <div class="col50 pricelist-range">
+                                                                    <input class="form-control input-price-min" type="text" placeholder="Min">
+                                                                    <div class="menu-price__min min-options">
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="0">
+                                                                            <div class="dropdown-item__content"><span>0</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="5">
+                                                                            <div class="dropdown-item__content"><span>5 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="10">
+                                                                            <div class="dropdown-item__content"><span>10 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="15">
+                                                                            <div class="dropdown-item__content"><span>15 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="20">
+                                                                            <div class="dropdown-item__content"><span>20 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="25">
+                                                                            <div class="dropdown-item__content"><span>25 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="30">
+                                                                            <div class="dropdown-item__content"><span>30 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="35">
+                                                                            <div class="dropdown-item__content"><span>35 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="40">
+                                                                            <div class="dropdown-item__content"><span>40 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="45">
+                                                                            <div class="dropdown-item__content"><span>45 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="50">
+                                                                            <div class="dropdown-item__content"><span>50 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="55">
+                                                                            <div class="dropdown-item__content"><span>55 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="60">
+                                                                            <div class="dropdown-item__content"><span>60 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col50 pricelist-range">
+                                                                    <input class="form-control input-price-max" type="text" placeholder="Max">
+                                                                    <div class="menu-price__max max-options">
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="5">
+                                                                            <div class="dropdown-item__content"><span>5 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="10">
+                                                                            <div class="dropdown-item__content"><span>10 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="15">
+                                                                            <div class="dropdown-item__content"><span>15 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="20">
+                                                                            <div class="dropdown-item__content"><span>20 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="25">
+                                                                            <div class="dropdown-item__content"><span>25 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="30">
+                                                                            <div class="dropdown-item__content"><span>30 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="35">
+                                                                            <div class="dropdown-item__content"><span>35 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="40">
+                                                                            <div class="dropdown-item__content"><span>40 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="45">
+                                                                            <div class="dropdown-item__content"><span>45 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="50">
+                                                                            <div class="dropdown-item__content"><span>50 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="55">
+                                                                            <div class="dropdown-item__content"><span>55 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="60">
+                                                                            <div class="dropdown-item__content"><span>60 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <div class="dropdown-item" tabindex="-1">
+                                                                            <div class="dropdown-item__content"><span>Bất kỳ</span></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col5">
+                                                <!-- Filter Status-->
+                                                <div class="top-additional--filter filter-status filter-options-radio" id="filterStatus" data-title="Tình trạng">
+                                                    <div class="align-items-center filter__content">
+                                                        <div class="dropdown-toggle filter--text filter-status--text text--center" data-toggle="dropdown" style="max-width: 120px;">T&igrave;nh tr&#x1EA1;ng</div>
+                                                        <div class="dropdown-menu">
+                                                            <!-- dropdown item-->
+                                                            <div class="dropdown-item">
+                                                                <div class="dropdown-item__content input-group">
+                                                                    <div class="form-check dropdown-item--checkbox">
+                                                                        <input class="form-check-input" id="dropdownCheck-inprogress" type="checkbox">
+                                                                        <label class="form-check-label" for="dropdownCheck-inprogress">&Dstrok;ang l&agrave;m</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- dropdown item-->
+                                                            <div class="dropdown-item">
+                                                                <div class="dropdown-item__content input-group">
+                                                                    <div class="form-check dropdown-item--checkbox">
+                                                                        <input class="form-check-input" id="dropdownCheck-done" type="checkbox">
+                                                                        <label class="form-check-label" for="dropdownCheck-done">&Dstrok;&atilde; b&agrave;n giao</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- dropdown item-->
+                                                            <div class="dropdown-item">
+                                                                <div class="dropdown-item__content input-group">
+                                                                    <div class="form-check dropdown-item--checkbox">
+                                                                        <input class="form-check-input" id="dropdownCheck-waiting" type="checkbox">
+                                                                        <label class="form-check-label" for="dropdownCheck-waiting">Ch&#x1B0;a l&agrave;m</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col5">
+                                                <!-- Filter Invesment-->
+                                                <div class="top-additional--filter filter-invesment" id="filterInvesment" data-title="Chủ đầu tư">
+                                                    <div class="align-items-center filter__content">
+                                                        <div class="dropdown-toggle text--center" data-toggle="dropdown"><span class="filter--text filter-category--text" style="max-width: 125px;">Ch&#x1EE7; &dstrok;&#x1EA7;u t&#x1B0;</span></div>
+                                                        <div class="dropdown-menu">
+                                                            <!-- dropdown item-->
+                                                            <div class="dropdown-item">
+                                                                <div class="dropdown-item__content">
+                                                                    <input type="text" placeholder="Ex: Thắng lợi group">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col5">
+                                                <!-- Filter More-->
+                                                <div class="top-additional--filter filter-more filter-options-count filterMoreProject" data-title="Thêm" data-option-count="0">
+                                                    <div class="align-items-center filter__content">
+                                                        <div class="dropdown-toggle filter--text filter-more--text text--center" data-toggle="dropdown">Th&ecirc;m</div>
+                                                        <div class="dropdown-menu dropdown-menu-right form-box-them" style="width: 420px;padding: 20px;font-size: 14px;">
+                                                            <!-- dropdown item-->
+                                                            <div class="dropdown-item">
+                                                                <div class="form-group">
+                                                                    <div class="title">
+                                                                        <strong>Thời gian bàn giao</strong>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col50">
+                                                                            <input class="form-control" placeholder="dd/mm/yyyy" style="height:37px;">
+                                                                            </input>
+                                                                        </div>
+                                                                        <div class="col50">
+                                                                            <div class="check-action inline" style="margin-right: 10px;">
+                                                                                <input type="checkbox" class="check">
+                                                                                <span class="name">Trước</span>
+                                                                            </div>
+                                                                            <div class="check-action inline">
+                                                                                <input type="checkbox" class="check">
+                                                                                <span class="name">Sau</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="title bold">Loại chi tiết</div>
+                                                                    <div class="select-custom">
+                                                                        <select name="" id="" class="form-control">
+                                                                            <option value="">Có khối đế </option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="title bold">Từ khoá</div>
+                                                                    <input type="text" class="form-control" style="height: 37px;" data-role="tagsinput">
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters-project "id="filters-properties">
+                                            <!-- Filter Category-->
+                                            
+                                            <div class="col5">
+                                                <div class="top-additional--filter filter-category filter-options-total" id="filterCategory" data-title="Loại dự án">
+                                                    <div class="align-items-center filter__content">
+                                                        <div class="dropdown-toggle text-center" data-toggle="dropdown"><span class="filter--text filter-category--text" style="max-width: 125px;">Loại giao dịch</span></div>
+                                                        <div class="dropdown-menu">
+                                                            <!-- dropdown item-->
+                                                            <div class="dropdown-item">
+                                                                <div class="dropdown-item__content input-group loaicheck" >
+                                                                    <div class="check-action">
+                                                                        <input type="checkbox" class="check">
+
+                                                                        <span class="name -ban">
+                                                                            <span class="dot"></span>BĐS Bán </span>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="dropdown-item">
+                                                                <div class="dropdown-item__content input-group loaicheck" >
+                                                                    
+                                                                    <div class="check-action">
+                                                                        <input type="checkbox" class="check">
+                                                                        <span class="name -thue"><span class="dot"></span>BĐS Thuê </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dropdown-item">
+                                                                <div class="dropdown-item__content input-group loaicheck" >
+                                                                    
+                                                                    <div class="check-action">
+                                                                        <input type="checkbox" class="check">
+                                                                        <span class="name -daban"><span class="dot"></span>Đã bán </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- dropdown item-->
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col5">
+                                                <!-- Filter Price-->
+                                                <div class="top-additional--filter filter-price" id="filterPrice">
+                                                    <div class="align-items-center filter__content">
+                                                        <div class="dropdown-toggle d-flex" data-toggle="dropdown"> <span class="filter--text filter-category--text text-center" style="max-width: 110px;">M&#x1EE9;c gi&aacute;</span></div>
+                                                        <div class="dropdown-menu">
+                                                            <div class="pricelist-range__container">
+                                                                <div class="col50 pricelist-range">
+                                                                    <input class="form-control input-price-min" type="text" placeholder="Min">
+                                                                    <div class="menu-price__min min-options">
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="0">
+                                                                            <div class="dropdown-item__content"><span>0</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="5">
+                                                                            <div class="dropdown-item__content"><span>5 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="10">
+                                                                            <div class="dropdown-item__content"><span>10 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="15">
+                                                                            <div class="dropdown-item__content"><span>15 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="20">
+                                                                            <div class="dropdown-item__content"><span>20 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="25">
+                                                                            <div class="dropdown-item__content"><span>25 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="30">
+                                                                            <div class="dropdown-item__content"><span>30 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="35">
+                                                                            <div class="dropdown-item__content"><span>35 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="40">
+                                                                            <div class="dropdown-item__content"><span>40 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="45">
+                                                                            <div class="dropdown-item__content"><span>45 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="50">
+                                                                            <div class="dropdown-item__content"><span>50 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="55">
+                                                                            <div class="dropdown-item__content"><span>55 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="60">
+                                                                            <div class="dropdown-item__content"><span>60 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col50 pricelist-range">
+                                                                    <input class="form-control input-price-max" type="text" placeholder="Max">
+                                                                    <div class="menu-price__max max-options">
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="5">
+                                                                            <div class="dropdown-item__content"><span>5 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="10">
+                                                                            <div class="dropdown-item__content"><span>10 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="15">
+                                                                            <div class="dropdown-item__content"><span>15 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="20">
+                                                                            <div class="dropdown-item__content"><span>20 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="25">
+                                                                            <div class="dropdown-item__content"><span>25 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="30">
+                                                                            <div class="dropdown-item__content"><span>30 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="35">
+                                                                            <div class="dropdown-item__content"><span>35 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="40">
+                                                                            <div class="dropdown-item__content"><span>40 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="45">
+                                                                            <div class="dropdown-item__content"><span>45 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="50">
+                                                                            <div class="dropdown-item__content"><span>50 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="55">
+                                                                            <div class="dropdown-item__content"><span>55 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <!-- Dropdown item-->
+                                                                        <div class="dropdown-item" tabindex="60">
+                                                                            <div class="dropdown-item__content"><span>60 tri&#x1EC7;u</span></div>
+                                                                        </div>
+                                                                        <div class="dropdown-item" tabindex="-1">
+                                                                            <div class="dropdown-item__content"><span>Bất kỳ</span></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col5">
+                                                <!-- Filter Status-->
+                                                <div class="top-additional--filter filter-status filter-options-radio" id="beds" data-title="Tình trạng">
+                                                    <div class="align-items-center filter__content">
+                                                        <div class="dropdown-toggle filter--text filter-status--text text--center " data-toggle="dropdown">Phòng ngủ</div>
+                                                        <ul class="number-dropdown dropdown-menu w100pc">
+                                                            <!-- dropdown item-->
+                                                            <li><a href="#">1+</a></li>
+                                                            <li><a href="#">0+</a></li>
+                                                            <li><a href="#">1+</a></li>
+                                                            <li><a href="#">2+</a></li>
+                                                            <li><a href="#">1+</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col5">
+                                                <!-- Filter Invesment-->
+                                                <div class="top-additional--filter filter-invesment" id="fileTypeProperties" data-title="Chủ đầu tư">
+                                                    <div class="align-items-center filter__content">
+                                                        <div class="dropdown-toggle text--center" data-toggle="dropdown"><span class="filter--text filter-category--text" style="max-width: 125px;">Loại BĐS</span></div>
+                                                        <div class="dropdown-menu">
+                                                            <!-- dropdown item-->
+                                                            <div class="dropdown-item" style="padding: 10px;">
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Căn hộ chung cư</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Officetel</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Shop house</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Nhà riêng</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Nhà phố liền kề</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Biệt thự</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Condotel</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Biệt thự nghỉ dưỡng</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Bungalow</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Nhà xưởng</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Đất nền/ Đất dự án</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Toà nhà văn phòng</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Khách sạn</span>
+                                                                </div>
+                                                                <div class="check-action">
+                                                                    <input type="checkbox" class="check">
+                                                                    <span class="name">Trung tâm thương mại</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col5">
+                                                <!-- Filter More-->
+                                                <div class="top-additional--filter filter-more filter-options-count filterMoreProject" data-title="Thêm" data-option-count="0">
+                                                    <div class="align-items-center filter__content">
+                                                        <div class="dropdown-toggle filter--text filter-more--text text--center" data-toggle="dropdown">Th&ecirc;m</div>
+                                                        <div class="dropdown-menu dropdown-menu-right form-box-them" style="width: 420px;padding: 20px;font-size: 14px;">
+                                                            <!-- dropdown item-->
+                                                            <div class="dropdown-item">
+                                                                <div class="form-group">
+                                                                    <div class="title">
+                                                                        <strong>Diện tích đất</strong>
+                                                                    </div>
+                                                                    <div class="box-range-dt">
+                                                                        <div class="min">0</div>
+                                                                        <div class="max">150+ m2</div>
+
+                                                                        <input id="dtdrang" type="text">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="title">
+                                                                        <strong>Diện tích sử dụng</strong>
+                                                                    </div>
+                                                                    <div class="box-range-dt">
+                                                                        <div class="min">0</div>
+                                                                        <div class="max">150+ m2</div>
+
+                                                                        <input id="dtdsdrang" type="text">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-cus">
+                                                                    <div class="col4">
+                                                                        <div class="form-group">
+                                                                            <div class="title bold">Chiều ngang</div>
+                                                                            <input type="text" class="form-control" placeholder="Ex: 8m">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col4">
+                                                                        
+                                                                    </div>
+                                                                    <div class="col4">
+                                                                        <div class="form-group">
+                                                                            <div class="title bold">Chiều dọc</div>
+                                                                            <input type="text" class="form-control" placeholder="Ex: 8m">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row-cus">
+                                                                    <div class="col4">
+                                                                        <div class="form-group">
+                                                                            <div class="title bold">Phòng tắm</div>
+                                                                            <div class="number-quantity">
+                                                                                <div class="minus">
+                                                                                    <span class="fa icon fa-minus"></span>
+                                                                                </div>
+                                                                                <input type="text" class="form-control" value="0">
+                                                                                <div class="plus">
+                                                                                    <span class="fa icon fa-plus"></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col4">
+                                                                        <div class="form-group">
+                                                                            <div class="title bold">Số tầng</div>
+                                                                            <div class="number-quantity">
+                                                                                <div class="minus">
+                                                                                    <span class="fa icon fa-minus"></span>
+                                                                                </div>
+                                                                                <input type="text" class="form-control" value="0">
+                                                                                <div class="plus">
+                                                                                    <span class="fa icon fa-plus"></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col4">
+                                                                        <div class="check-action">
+                                                                            <input type="checkbox" class="check">
+                                                                            <strong class="name">Mặt tiền</strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="title bold">Hướng</div>
+                                                                    <div class="row-cus">
+                                                                        <div class="col3">
+                                                                            <div class="check-action">
+                                                                            <input type="checkbox" class="check">
+                                                                                <span class="name">Đông</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col3">
+                                                                            <div class="check-action">
+                                                                            <input type="checkbox" class="check">
+                                                                                <span class="name">Tây</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col3">
+                                                                            <div class="check-action">
+                                                                            <input type="checkbox" class="check">
+                                                                                <span class="name">Nam</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col3">
+                                                                            <div class="check-action">
+                                                                            <input type="checkbox" class="check">
+                                                                                <span class="name">Bắc</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row-cus">
+                                                                        <div class="col3">
+                                                                            <div class="check-action">
+                                                                            <input type="checkbox" class="check">
+                                                                                <span class="name">Đông bắc</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col3">
+                                                                            <div class="check-action">
+                                                                            <input type="checkbox" class="check">
+                                                                                <span class="name">Tây bắc</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col3">
+                                                                            <div class="check-action">
+                                                                            <input type="checkbox" class="check">
+                                                                                <span class="name">Đông nam</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col3">
+                                                                            <div class="check-action">
+                                                                            <input type="checkbox" class="check">
+                                                                                <span class="name">Tây nam</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="title bold">Từ khoá</div>
+                                                                    <input type="text" class="form-control" style="height: 36px;" data-role="tagsinput">
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script type="text/javascript">
+                                                $("#dtdrang").ionRangeSlider({
+                                                    min: 0,
+                                                    max: 150,
+                                                    from: 5
+                                                });
+                                                $("#dtdsdrang").ionRangeSlider({
+                                                    min: 0,
+                                                    max: 150,
+                                                    from: 5
+                                                });
+                                        </script>
+                                        <!-- END FILTERS FOR PROPERTIES-->
+                                        <!-- FILTER FOR PROPERTIES-->
+                                    </div>
+                                    <!-- FILTERS MAP MODE-->
+                                    <div class="filterBar__top--map-mode">
+                                        <div class="map-mode">
+                                            <div class="map-mode__container">
+                                                <div class="map-mode__content">
+                                                    <div class="map-mode">
+                                                        <div class="row mode__content">
+                                                            <div class="select-mode mode-display">B&#x1EA3;n &dstrok;&#x1ED3;</div>
+                                                            <div class="select-mode mode-satellite">V&#x1EC7; tinh</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filterBar__share">
+                                    <div class="share_content">
+                                        <div class="share--btn"><img src="../../../assets/img/ic-share-black.png" alt=""></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Map notification-->
+                <div class="filterBar__view">
+                    <div class="street-view">
+                        <div class="street-view__container">
+                            <div class="street-view__content">
+                                <div class="street-view--item outline-location">
+                                    <div class="street-view--btn outline-location__content"><img src="../../../assets/img/outline-location.png" alt=""></div>
+                                </div>
+                                <div class="street-view--item baseline-view">
+                                    <div class="street-view--btn baseline-view__content"><img src="../../../assets/img/baseline-view.png" alt=""></div>
+                                </div>
+                                <div class="street-view--item road-perspective">
+                                    <div class="street-view--btn road-perspective__content"><span class="fa fa-road icon"></span></div>
+                                </div>
+                                <div class="street-view--item baseline-trip">
+                                    <div class="street-view--btn baseline-trip__content"><img src="../../../assets/img/baseline-trip.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-notification" id="map-notification">
+                    <div class="map-notification__container">
+                        <div class="d-flex map-notification__content justify-content-center">
+                            <div class="notification--text">
+                                C&oacute; qu&aacute; nhi&#x1EC1;u B&Dstrok;S / D&#x1EF1; &aacute;n &dstrok;&#x1B0;&#x1EE3;c t&igrave;m th&#x1EA5;y nh&#x1B0;ng ch&#x1EC9; hi&#x1EC3;n th&#x1ECB; t&#x1ED1;i &dstrok;a 500 &dstrok;&#x1ED1;i t&#x1B0;&#x1EE3;ng, zoom in b&#x1EA3;n &dstrok;&#x1ED3; &dstrok;&#x1EC3; xem
+                                th&ecirc;m
+                            </div>
+                            <div class="ml-2 notification--link">&Dstrok;&atilde; hi&#x1EC3;u</div>
+                            <div class="notification--background"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Map Zoom-->
+                <div class="map-zoom" id="map-zoom">
+                    <div class="map-zoom">
+                        <div class="d-flex flex-column map-zoom">
+                            <div class="map-zoom--item map-zoom--in">
+                                <div class="map-zoom--btn zoom-in__content"><img src="../../../assets/img/baseline-in.png" alt=""></div>
+                            </div>
+                            <div class="map-zoom--item map-zoom--out">
+                                <div class="map-zoom--btn zoom-out__content"><img src="../../../assets/img/baseline-out.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="map-mobile flex-xl-nowrap d-xl-none">
+        <div class="container">
+            <div class="homepage-header_mobile d-xl-none" id="m1-header_mobile">
+                <div class="m1-header_mobile__container">
+                    <div class="m1-header_mobile__content d-flex justify-content-between">
+                        <div class="m1-menu_mobile__drawer d-flex align-items-center">
+                            <div class="mobile-drawer__content">
+                                <div class="drawer-toggler" data-toggle="modal" data-target="#drawerToggleExternalContentMobile" aria-controls="drawerToggleExternalContentMobile" aria-expanded="false" aria-label="Toggle navigation"><img src="../../assets/img/icon-drawer.png" alt=""></div>
+                                <div class="modal fadeInRight" id="drawerToggleExternalContentMobile" tabindex="-1" role="dialog" aria-labelledby="drawerToggleExternalContentMobile" aria-hidden="true">
+                                    <div class="modal-content">
+                                        <nav class="mobile-navbar">
+                                            <div class="mobile-navbar__content"><a class="navbar-brand" href="/"><img src="../../assets/img/asset-logo.png" alt=""></a>
+                                                <div class="navbar__items">
+                                                    <div class="navbar--item"><a href="/ket-qua/thong-tin">Th&ocirc;ng tin</a></div>
+                                                    <div class="navbar--item"><a href="/ban-do">B&#x1EA3;n &dstrok;&#x1ED3;</a></div>
+                                                    <div class="navbar--item"><a href="/ket-qua/bang-gia">B&#x1EA3;ng gi&aacute;</a></div>
+                                                    <div class="navbar--item"><a href="#">Danh b&#x1EA1;</a></div>
+                                                    <div class="navbar--item"><a href="#">T&agrave;i nguy&ecirc;n</a></div>
+                                                    <div class="navbar--item"><a href="#">H&#x1ECF;i &dstrok;&aacute;p</a></div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m1-menu_mobile__items d-flex align-items-center">
+                            <div class="m1-menu--item dropdown dropdown__menu-tool">
+                                <div class="dropdown-toggle" data-toggle="dropdown"><img class="img_menu" src="../../assets/img/Group 1.png" alt=""></div>
+                                <div class="dropdown-menu menu-tool">
+                                    <div class="dropdown-item"><a href="#"><img src="../../assets/img/Group 1569.png" alt=""><span class="menu-tool--text">
+                                                T&iacute;nh to&aacute;n kho&#x1EA3;n
+                                                vay</span></a></div>
+                                    <div class="dropdown-item"><a href="#"><img src="../../assets/img/baseline-insert_chart-24px.png" alt=""><span class="menu-tool--text">T&iacute;nh to&aacute;n hi&#x1EC7;u qu&#x1EA3; d&#x1EF1; &aacute;n</span></a></div>
+                                    <div class="dropdown-item"><a href="#"><img src="../../assets/img/baseline-monetization_on-24px.png" alt=""><span class="menu-tool--text">T&agrave;i ch&iacute;nh c&aacute; nh&acirc;n</span></a></div>
+                                </div>
+                            </div>
+                            <div class="m1-menu--item">
+                                <div class="menu-notify"><a href="#"><img src="../../assets/img/Group 22.png" alt=""></a></div>
+                            </div>
+                            <div class="m1-menu--item"><a class="btn-login" href="/dang-nhap"><img src="../../assets/img/icon-avatar.png" alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage-body" id="m1-body">
+                <div class="m1-body__container">
+                    <div class="m1-body__content d-flex flex-column justify-content-center"  style="height: calc(100vh - 63px);">
+                        <div class="map-mobile d-flex flex-column align-items-center"><img src="../../../assets/img/baseline-mobile.png" alt=""><span class="map-mobile-off">Mobile off</span><span class="map-mobile--notify">H&atilde;y tr&#x1EA3;i nghi&#x1EC7;m ch&#x1EE9;c n&abreve;ng n&agrave;y tr&ecirc;n desktop</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CHAT SIDEBAR-->
+    <div class="chat-sidebar collapsed d-none d-xl-block" id="chat-sidebar">
+        <div class="chat-sidebar__container">
+            <div class="chat-sidebar__content d-flex flex-column justify-content-between">
+                <!-- Chat Sidebar Top-->
+                <div class="chat-sidebar__top">
+                    <div class="chat-sidebar--btn-collapse">
+                        <div class="btn-expand__content">
+                            <button class="btn btn-chat--expand" id="btn-chat--expand"><img src="../../../assets/img/Path 115.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chat Sidebar Bottom-->
+                <div class="chat-sidebar__bottom">
+                    <!-- Chat list-->
+                    <div class="chat-sidebar__list chat-list">
+                        <div class="chat-list__container">
+                            <div class="chat-list__content">
+                                <div class="chat-list__contact">
+                                    <div class="chat-list--contact-items">
+                                        <!-- Contact items-->
+                                        <div class="contact-items contact-items__active">
+                                            <!-- Contact item-->
+                                            <div class="contact-item d-flex justify-content-center">
+                                                <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-1.png" alt=""></div>
+                                                <div class="contact-item--name">L&ecirc; &Aacute;nh H&#x1ED3;ng Nga</div>
+                                                <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                                            </div>
+                                            <!-- Contact item-->
+                                            <div class="contact-item d-flex justify-content-center">
+                                                <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-2.png" alt=""></div>
+                                                <div class="contact-item--name">Peter Parker</div>
+                                                <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                                            </div>
+                                            <!-- Contact item-->
+                                            <div class="contact-item d-flex justify-content-center">
+                                                <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-3.png" alt=""></div>
+                                                <div class="contact-item--name">Tom Hank</div>
+                                                <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                                            </div>
+                                            <!-- Contact item-->
+                                            <div class="contact-item d-flex justify-content-center">
+                                                <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-4.png" alt=""></div>
+                                                <div class="contact-item--name">Amy Lee Johnson</div>
+                                                <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                                            </div>
+                                            <!-- Contact item-->
+                                            <div class="contact-item d-flex justify-content-center">
+                                                <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-5.png" alt=""></div>
+                                                <div class="contact-item--name">Picasa Poo</div>
+                                                <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                                            </div>
+                                        </div>
+                                        <!-- Contact items-->
+                                        <div class="contact-items contact-items__inactive">
+                                            <!-- Contact item-->
+                                            <div class="contact-item d-flex justify-content-center">
+                                                <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-6.png" alt=""></div>
+                                                <div class="contact-item--name">Jessica Snow</div>
+                                                <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Chat message-->
+                    <div class="chat-sidebar__chat-message">
+                        <div class="chat-message__container">
+                            <div class="chat-message__content">
+                                <div class="chat-message d-flex justify-content-center align-items-center">
+                                    <div class="chat-message--icon"><img src="../../../assets/img/chat-message.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Chat Search-->
+                    <div class="chat-sidebar__search-input">
+                        <div class="search-input">
+                            <div class="search-input__container">
+                                <div class="search-input__content">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="search-icon"><img src="../../../assets/img/SVG/search.svg" alt=""></div>
+                                        </div>
+                                        <input class="form-control" type="text" placeholder="Tìm kiếm bạn bè" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Chat pop-up-->
+                    <div id="chat-sidebar__pop-up">
+                        <div class="chat-popup">
+                            <div class="chat-popup__container">
+                                <div class="chat-popup__content">
+                                    <div class="chat-popup__items" id="chat-popup__items">
+                                        <div class="chat-popup--item">
+                                            <div class="chat-popup--header d-flex">
+                                                <div class="chat-popup--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div><span class="ml-2 header--text">Test</span>
+                                                <div class="chat-popup--close">&times;</div>
+                                            </div>
+                                            <div class="chat-popup--body">
+                                                <div class="message-received">
+                                                    <div class="message-received__content row">
+                                                        <div class="col-2 px-0 received__content--icon"><img src="../../../assets/img/chat-avt-1.png" alt=""></div>
+                                                        <div class="col-10 received__content--text"><span>
+                                                                KHLCNT c&#x1EE7;a Ban Qu&#x1EA3;n l&yacute; d&#x1EF1; &aacute;n &dstrok;&#x1EA7;u t&#x1B0; x&acirc;y .... KHLCNT c&#x1EE7;a S&#x1EDF; T&agrave;i ch&iacute;nh t&#x1EC9;nh H&#x1B0;ng Y&ecirc;n
+                                                                cho d&#x1EF1;
+                                                                &aacute;n &ldquo;Mua s&#x1EAF;m thi&#x1EBF;t b&#x1ECB; &dstrok;&#x1ECB;nh .... H&#x1EA1;ng m&#x1EE5;c: X&oacute;m Ao V&agrave;ng, C&#x1ED5; R&ugrave;a, G&ograve; Ch&egrave;, Ph&uacute;c L&#x1ED9;c, Quy&#x1EBF;t
+                                                                Th&#x1EAF;ng, T&acirc;n ...</span></div>
+                                                        <div class="col-12 received__content--time text-right"><span>12:09 - 18/10/2019</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="message-send">
+                                                    <div class="message-send__content row align-items-end flex-column">
+                                                        <div class="message-send--text"><span>OK</span></div>
+                                                        <div class="message-send--time text-right"><span>1 min</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-popup--input">
+                                                <div class="input-group">
+                                                    <input class="form-control" type="text" placeholder="Nhập tin nhắn" aria-label="Username" aria-describedby="basic-addon1">
+                                                    <div class="input-group-append">
+                                                        <div class="send-icon"><img src="../../../assets/img/icon-send.png" alt=""></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- DRAWER BAR-->
+    <div class="dt-menu__drawer d-flex align-items-center">
+        <div class="menu-drawer__content">
+            <div class="modal fadeInRight" id="drawerToggleExternalContent" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="drawerToggleExternalContent" aria-hidden="true">
+                <div class="modal-content">
+                    <nav class="dt-navbar">
+                        <div class="dt-navbar__content">
+                            <div class="btn-drawer__toggle" data-dismiss="modal"><img src="../../assets/img/icon-chevron-right.png"></div><a class="dt-navbar--brand" href="/"><img src="../../assets/img/asset-logo.png" alt=""></a>
+                            <div class="dt-navbar__user">
+                                <div class="navbar-user__content d-flex align-items-center">
+                                    <div class="user--avatar"><img src="../../assets/img/icon-avatar.png" alt=""></div>
+                                    <div class="user--infor">
+                                        <div class="user-infor__content">
+                                            <div class="user--name">Hu&#x1EF3;nh Th&#x1ECB; Di&#x1EC7;u Th&#x1B0;&#x1A1;ng</div>
+                                            <div class="user--rate">
+                                                <div class="user-rate__content d-flex align-items-center"><span class="user-rate__name">[Chuy&ecirc;n gia <span class="user-rate__level">4.5+</span></span><img class="user-rate__icon" src=" ../../../assets/img/SVG/star.svg" alt="">]</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user--menu">
+                                        <div class="user-menu__content d-flex align-items-center">
+                                            <div class="menu--item dropdown dropdown-right dropdown__menu-tool">
+                                                <div class="dropdown-toggle" data-toggle="dropdown"><img class="img_menu" src="../../assets/img/Group 1.png" alt=""></div>
+                                                <div class="dropdown-menu dropdown-menu-right menu-tool">
+                                                    <div class="dropdown-item"><a href="#"><img src="../../assets/img/Group 1569.png" alt=""><span class="menu-tool--text">
+                                                                T&iacute;nh to&aacute;n
+                                                                kho&#x1EA3;n
+                                                                vay</span></a></div>
+                                                    <div class="dropdown-item"><a href="#"><img src="../../assets/img/baseline-insert_chart-24px.png" alt=""><span class="menu-tool--text">T&iacute;nh to&aacute;n hi&#x1EC7;u qu&#x1EA3; d&#x1EF1; &aacute;n</span></a></div>
+                                                    <div class="dropdown-item"><a href="#"><img src="../../assets/img/baseline-monetization_on-24px.png" alt=""><span class="menu-tool--text">T&agrave;i ch&iacute;nh c&aacute; nh&acirc;n</span></a></div>
+                                                </div>
+                                            </div>
+                                            <div class="menu--item">
+                                                <div class="menu-notify"><a href="#"><img src="../../assets/img/Group 22.png" alt=""></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dt-navbar__items"><a class="dt-navbar--item" href="/ket-qua/thong-tin">Th&ocirc;ng tin</a><a class="dt-navbar--item" href="/ket-qua/bang-gia">B&#x1EA3;ng gi&aacute;</a><a class="dt-navbar--item" href="#">Th&ecirc;m</a></div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/scripts/index.js"></script>
+    <script src="../../../assets/scripts/bootstrap-tagsinput.min.js"></script>
+    <script src="../../assets/scripts/chat/index.js"></script>
+    <script src="../../../assets/scripts/resultpage/map/filter-bar-dist.js"></script>
+    <script src="../../vendor/auto-complete/autocomplete.js"></script>
+    <script src="../../assets/scripts/resultpage/generic.js"></script>
+    <script src="./../assets/scripts/resultpage/resultpage-autocomplete.js"></script>
+    <script type="text/javascript">
+        $(document).on('click.bs.dropdown', '.filter__content', function (e) {
+          e.stopPropagation();
+        });
+        $("#beds .dropdown-menu a").click(function(){
+
+            $(this).parents("#beds").find(".filter--text").text("Phòng ngủ: "+$(this).text());
+        });
+        $(function () {
+            
+            $('.filterMoreProject input').on('click', function() {
+
+              $('.filterMoreProject .filter--text').text("Thêm: "+$(".filterMoreProject input:checked").length );
+            }).triggerHandler("click"); // handle reload and initial counter
+        });
+        $("#fileTypeProperties .check").click(function(){
+            var text="";
+            $("#fileTypeProperties .check").each(function(){
+                if($(this).is(":checked")){
+                    text+=$(this).parent().find(".name").text() + ", ";
+                }
+            });
+             $('#fileTypeProperties .filter--text').text(text);
+            console.log(text);
+        });
+    </script>
+</body>
+
+</html>
